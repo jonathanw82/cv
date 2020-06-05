@@ -11,12 +11,17 @@ def index():
 
 @app.route("/nextpage") 
 def nextpage():
-    return render_template("nextpage.html", page_title="Next Page")
+    return render_template("nextpage.html", page_title="next")
 
 
 @app.route("/gitpod") 
 def gitpod():
     return render_template("gitpod.html", page_title="GitPod")
+
+
+@app.route("/hobbies") 
+def hobbies():
+    return render_template("Hobbies.html", page_title="Hobbies")
 
 
 if __name__ == "__main__":
