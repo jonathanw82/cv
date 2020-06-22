@@ -9,19 +9,24 @@ def index():
     return render_template("index.html", page_title="Home")
 
 
-@app.route("/nextpage") 
-def nextpage():
-    return render_template("nextpage.html", page_title="next")
+@app.route("/resume") 
+def resume():
+    return render_template("resume.html", page_title="Resume")
 
 
-@app.route("/gitpod") 
-def gitpod():
-    return render_template("gitpod.html", page_title="GitPod")
+@app.route("/github") 
+def github():
+    return render_template("github.html", page_title="GitHub")
 
 
 @app.route("/hobbies") 
 def hobbies():
     return render_template("Hobbies.html", page_title="Hobbies")
+
+
+@app.route("/contact") 
+def contact():
+    return render_template("contact.html", page_title="Contact")
 
 
 if __name__ == "__main__":

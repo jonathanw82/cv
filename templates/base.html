@@ -14,35 +14,46 @@
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="{{url_for ('static', filename='favicon.ico')}}">
 	<link rel="stylesheet" href="{{url_for ('static', filename='css/style.css')}}" type="text/css">
 
 	<title>{% block title %}{%endblock%}</title>
 </head>
+
 <body>
-    <header>
-        <div class="row">
-            <div class="col-sm-3">
-                <img class="avatarImage" src="/static/images/avatar.jpg" alt="profile image">
-            </div>   
-            div   
-        </div>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="{{ url_for('index') }}">Jonathan Wheway</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">	
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			  <div class="navbar-nav ml-auto">
+				<a class="nav-item nav-link hvr-shutter-out-vertica" href="{{ url_for('index') }}"><i class="fa fa-home" aria-hidden="true"></i><span> About</span></a>
+				<a class="nav-item nav-link hvr-shutter-out-vertical" href="{{ url_for('resume') }}"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span> Resume</span></a>
+				<a class="nav-item nav-link hvr-shutter-out-vertical" href="{{ url_for ('github') }}"><i class="fab fa-github"></i><span> GitHub</span></a>
+				<a class="nav-item nav-link hvr-shutter-out-vertical" href="{{ url_for ('hobbies') }}"><i class="fas fa-seedling" aria-hidden="true"></i><span> Hobbies</span></a>
+				<a class="nav-item nav-link hvr-shutter-out-vertical" href="{{ url_for ('contact') }}"><i class="fa fa-comment-o" aria-hidden="true"></i><span> Contact</span></a>
+				<a class="nav-item nav-link hvr-shutter-out-vertical" href=#><i class="fa fa-download" aria-hidden="true"></i><span> Download</span></a>
+			  </div>
+			</div>
+		  </nav>
+	</header>
 
-    </header>
-
-
-{% block content%}
+	{% block content%}
 
 
 
-{% endblock %}
+	{% endblock %}
 
 
-<!--=============================================== Java Script ===================================================-->
+	<!--=============================================== Java Script ===================================================-->
 
-{% block script %}
-    
-{% endblock %}
+	{% block script %}
+		
+	{% endblock %}
 
 </body>
 
