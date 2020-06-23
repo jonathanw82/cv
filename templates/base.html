@@ -15,7 +15,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@300&family=Roboto&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="{{url_for ('static', filename='favicon.ico')}}">
 	<link rel="stylesheet" href="{{url_for ('static', filename='css/style.css')}}" type="text/css">
 
@@ -26,6 +26,7 @@
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<a class="navbar-brand nav-item-name nav-name-mobile" href="{{ url_for('index') }}">Jonathan Wheway</a>
+			<a class="navbar-brand nav-item-name nav-name-mobile1" href="{{ url_for('index') }}">Jon Wheway</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">	
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -38,7 +39,7 @@
 				<a class="nav-item nav-link" href="{{ url_for ('hobbies') }}"><i class="fas fa-seedling nav-icon" aria-hidden="true"></i><br><span> Hobbies</span></a>
 				<a class="nav-item nav-link" href="{{ url_for ('contact') }}"><i class="fa fa-comment-o nav-icon" aria-hidden="true"></i><br><span> Contact</span></a>
 				<a class="nav-item nav-link" href="static/doc/JonWheway_cv_update.pdf" target="_blank"><i class="fa fa-download nav-icon" aria-hidden="true"></i><br><span> Download</span></a>
-			  </div>
+			</div>
 			</div>
 		  </nav>
 	</header>
@@ -52,10 +53,10 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-12">
-					<i class="fab fa-linkedin footer-icon" aria-hidden="true"></i>
-					<i class="fab fa-facebook-square footer-icon" aria-hidden="true"></i>
-					<i class="fab fa-youtube-square footer-icon" aria-hidden="true"></i>
-					<i class="fab fa-github-square footer-icon"></i><br>
+					<a href="https://www.linkedin.com/in/jonathan-wheway/" target="_blank"><i class="fab fa-linkedin footer-icon"aria-hidden="true"></i></a>
+					<a href="https://www.facebook.com"><i class="fab fa-facebook-square footer-icon" aria-hidden="true"></i></a>
+					<a href="https://www.youtube.com/"><i class="fab fa-youtube-square footer-icon" aria-hidden="true"></i></a>
+					<a href="https://github.com/jonathanw82"><i class="fab fa-github-square footer-icon"></i></a><br>
 					<div class="copyright-footer" >Copyright-&copy; 2019-<script> document.write(new Date().getFullYear()); </script> Jonathan Wheway</div>
 				</div>
 			</div>

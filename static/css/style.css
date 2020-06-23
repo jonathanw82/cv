@@ -1,3 +1,6 @@
+/*------------------ Body ---------------------*/
+
+
 /*------------------ Landing page ---------------------*/
 
 .avatar-image{
@@ -5,6 +8,7 @@
     height: auto;
     border-radius: 50%;
     border-style: groove;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .avatar-col{
@@ -15,9 +19,32 @@
 .title-text{
     text-align: center;
     font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    margin: auto;
+}
+
+.about-heading{
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.about-text{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.email-address{
+    color: gray;
+}
+
+.email-address:hover{
+    cursor: pointer;
+    color: blue;
 }
 
 /*--------------- Navingation and footer ------------- */
+
 .nav-bar-center{
     justify-content: center!important;
 }
@@ -44,12 +71,13 @@
 }
 
 footer{
-    background-color: #f8f9fa!important;
+    background-color: #D99F6C!important;
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 50px;
+    padding-top: 3px;
     text-align: center;
+    position: fixed;
 }
 
 .footer-icon{
@@ -65,7 +93,12 @@ footer{
 
 /* ------------------- Media Queries -----------------*/
 @media only screen and (min-width: 768px){
+
     .nav-name-mobile{
+        display: none;
+    }
+
+    .nav-name-mobile1{
         display: none;
     }
 }
@@ -104,10 +137,31 @@ footer{
     .avatar-col{
         text-align: center;
     }
+    .nav-item-name{
+        font-size: 1.7rem;
+    }
+
+    .nav-name-mobile{
+        display: none;
+    }
+
 }    
 
+@media only screen and (max-width: 375px){
+
+    .nav-item-name{
+        font-size: 1.6rem;
+    }
+
+   
+}    
 
 @media only screen and (max-width: 320px){
+
+    .nav-item-name{
+        padding-right: 5px;
+    }
+
     .copyright-footer{
         font-size: 0.7rem;
     }

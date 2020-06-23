@@ -1,12 +1,14 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def index():
-    return render_template("index.html", page_title="Home")
+    page = 'home'
+
+    return render_template("index.html", page_title="Home", pagename=page)
 
 
 @app.route("/resume") 
