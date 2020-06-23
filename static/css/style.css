@@ -1,26 +1,25 @@
-/*================= Landing page======================*/
+/*------------------ Landing page ---------------------*/
 
-/* .avatarImage{
-    width: 100%;
+.avatar-image{
+    width: 60%;
     height: auto;
+    border-radius: 50%;
+    border-style: groove;
 }
 
-.navbutton{
-    width: 100%;
-    height: auto;
-    border: 2px solid gray;
+.avatar-col{
+    padding-top: 10px;
+    text-align: right;
 }
 
-
-/*--------------------------------------------------- Hover.css */
-
-
-.hvr-shutter-out-vertical {
-    background-color: transparent;    
+.title-text{
+    text-align: center;
+    font-size: 2rem;
 }
 
-.hvr-shutter-out-vertical:before{
-    background: rgba(0,0,0,0.2);
+/*--------------- Navingation and footer ------------- */
+.nav-bar-center{
+    justify-content: center!important;
 }
 
 .nav-item{
@@ -32,10 +31,16 @@
     font-size: 1.2rem;
 }
 
+.test:hover{
+    color: red!important;
+}
+
 .nav-item-name{
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     color: rgb(0,0,0,.5)!important;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 footer{
@@ -57,16 +62,48 @@ footer{
     font-size: 1.1rem;
 }
 
-/* ----------------- Media Queries ---------------*/
+
+/* ------------------- Media Queries -----------------*/
+@media only screen and (min-width: 768px){
+    .nav-name-mobile{
+        display: none;
+    }
+}
+
 
 @media only screen and (max-width: 768px){
-  .nav-icon{
-    display: none;
-  }
+    
+    .bg-light{
+        justify-content: center;
+    }
 
-  .nav-item{
-    text-align: left;
-  }
+    .nav-icon{
+        display: none;
+    }
+
+    .nav-item{
+        text-align: left;
+    }
+
+    .title-text{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .nav-name-desktop{
+        display: none;
+    }
+
+    .nav-name-mobile{
+        display: block;
+    }
+}    
+
+
+@media only screen and (max-width: 425px){
+    .avatar-col{
+        text-align: center;
+    }
 }    
 
 

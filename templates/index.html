@@ -1,18 +1,23 @@
   
 {%  extends 'base.html' %}
 
-{% block title%}
+{% block title %}
 Home
-
 {%endblock%}
 
-{% block content %}
-    <h2>{{ page_title }}</h2>  
+{% block content %} 
 
-<div class="conatiner-fluid">
+<div class="conatiner">
+    <div class="row">
+        <div class="col-sm-4 avatar-col">
+            <img class="avatar-image" src="/static/images/avatar.jpg" alt="Avatar Image">
+        </div>
+        <div class="col-sm-8 title-text">
+            <p class="title ">Full Stack Developer With Green Fingers</p>
+        </div>
     
 
-
+    </div>
 </div>
 
 {% endblock %}
@@ -20,6 +25,24 @@ Home
 
 {% block script %}
 
-<script></script>
+<script>
+    var textWrapper = document.querySelector('.title');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({loop: true})
+    .add({
+        targets: '.title .letter',
+        opacity: [0,1],
+        easing: "easeInOutQuad",
+        duration: 2250,
+        delay: (el, i) => 150 * (i+1)
+    }).add({
+        targets: '.title',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+    });
+</script>
 
 {% endblock %}

@@ -14,7 +14,6 @@
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="{{url_for ('static', filename='favicon.ico')}}">
@@ -26,18 +25,19 @@
 <body>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand nav-item-name" href="{{ url_for('index') }}">Jonathan Wheway</a>
+			<a class="navbar-brand nav-item-name nav-name-mobile" href="{{ url_for('index') }}">Jonathan Wheway</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">	
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			  <div class="navbar-nav ml-auto">
-				<a class="nav-item nav-link hvr-shutter-out-vertical" href="{{ url_for('index') }}"><i class="fa fa-home nav-icon" aria-hidden="true"></i><br><span> About</span></a>
-				<a class="nav-item nav-link hvr-shutter-out-vertical" href="{{ url_for('resume') }}"><i class="fa fa-graduation-cap nav-icon" aria-hidden="true"></i><br><span> Resume</span></a>
-				<a class="nav-item nav-link hvr-shutter-out-vertical" href="{{ url_for ('github') }}"><i class="fab fa-github nav-icon"></i><br><span> GitHub</span></a>
-				<a class="nav-item nav-link hvr-shutter-out-vertical" href="{{ url_for ('hobbies') }}"><i class="fas fa-seedling nav-icon" aria-hidden="true"></i><br><span> Hobbies</span></a>
-				<a class="nav-item nav-link hvr-shutter-out-vertical" href="{{ url_for ('contact') }}"><i class="fa fa-comment-o nav-icon" aria-hidden="true"></i><br><span> Contact</span></a>
-				<a class="nav-item nav-link hvr-shutter-out-vertical" href="static/doc/JonWheway_cv_update.pdf" target="_blank"><i class="fa fa-download nav-icon" aria-hidden="true"></i><br><span> Download</span></a>
+			<div class="collapse navbar-collapse nav-bar-center" id="navbarNavAltMarkup">
+			  <div class="navbar-nav">
+				<a class="nav-item nav-link test" href="{{ url_for('index') }}"><i class="fa fa-home nav-icon" aria-hidden="true"></i><br><span> About</span></a>
+				<a class="nav-item nav-link" href="{{ url_for('resume') }}"><i class="fa fa-graduation-cap nav-icon" aria-hidden="true"></i><br><span> Resume</span></a>
+				<a class="nav-item nav-link" href="{{ url_for ('github') }}"><i class="fab fa-github nav-icon"></i><br><span> GitHub</span></a>
+				<a class="navbar-brand nav-item-name nav-name-desktop" href="{{ url_for('index') }}">Jonathan Wheway</a>
+				<a class="nav-item nav-link" href="{{ url_for ('hobbies') }}"><i class="fas fa-seedling nav-icon" aria-hidden="true"></i><br><span> Hobbies</span></a>
+				<a class="nav-item nav-link" href="{{ url_for ('contact') }}"><i class="fa fa-comment-o nav-icon" aria-hidden="true"></i><br><span> Contact</span></a>
+				<a class="nav-item nav-link" href="static/doc/JonWheway_cv_update.pdf" target="_blank"><i class="fa fa-download nav-icon" aria-hidden="true"></i><br><span> Download</span></a>
 			  </div>
 			</div>
 		  </nav>
