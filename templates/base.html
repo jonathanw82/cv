@@ -18,11 +18,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@300&family=Roboto&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="{{url_for ('static', filename='favicon.ico')}}">
 	<link rel="stylesheet" href="{{url_for ('static', filename='css/style.css')}}" type="text/css">
+	<link rel="stylesheet" href="{{url_for ('static', filename='css/landingpage.css')}}" type="text/css">
+	<link rel="stylesheet" href="{{url_for ('static', filename='css/github.css')}}" type="text/css">
 
 	<title>{% block title %}{%endblock%}</title>
 </head>
 
-<body>
+<body class="{{ background }}"> <!--Displays background image on selected page -->
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<a class="navbar-brand nav-item-name nav-name-mobile" href="{{ url_for('index') }}">Jonathan Wheway</a>

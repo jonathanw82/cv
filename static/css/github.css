@@ -1,0 +1,35 @@
+/*----------------------- GitHub --------------------- */
+
+.bg-image-github{
+    background-image: url('/static/images/github.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ------------------- Media Queries github.html -----------------*/
+
+@media only screen and (max-width: 768px){
+    
+    
+}    
+
+@media only screen and (max-width: 425px){
+
+
+}  
+
+@media only screen and (max-width: 375px){
+
+   
+}  
+
+@media only screen and (max-width: 320px){
+
+    
+}  

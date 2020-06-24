@@ -18,7 +18,7 @@ def resume():
 
 @app.route("/github") 
 def github():
-    return render_template("github.html", page_title="GitHub")
+    return render_template("github.html", page_title="GitHub", background='bg-image-github')
 
 
 @app.route("/hobbies") 

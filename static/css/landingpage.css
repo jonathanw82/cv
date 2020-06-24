@@ -1,0 +1,68 @@
+/*------------------ Landing page ---------------------*/
+
+.avatar-image{
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
+    border-style: groove;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.avatar-col{
+    padding-top: 10px;
+    text-align: right;
+}
+
+.title-text{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    margin: auto;
+}
+
+.about-heading{
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.about-text{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.email-address{
+    color: gray;
+}
+
+.email-address:hover{
+    cursor: pointer;
+    color: blue;
+}
+
+/* ---------------- Media Queries landing.html ----------------*/
+
+@media only screen and (max-width: 768px){
+    
+    .title-text{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}    
+
+@media only screen and (max-width: 425px){
+
+    .avatar-col{
+        text-align: center;
+    }
+}  
+
+@media only screen and (max-width: 375px){
+
+
+}  
+
+@media only screen and (max-width: 320px){
+
+    
+}  
