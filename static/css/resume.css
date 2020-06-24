@@ -1,0 +1,109 @@
+.uppercase{
+    text-transform: uppercase;
+}
+
+/*--------------- Personal Info ------------------ */
+
+.personal-info-item{
+    margin-bottom: 20px;
+    display: block;
+    clear: both;
+}
+
+.personal-info-item .key,
+.personal-info-item .value{
+    padding-right: 8px;
+    display: inline-block;
+}
+
+.personal-info-item .key p,
+.personal-info-item .value p{
+    margin: 0;
+}
+
+.personal-info-item .key{
+    width: 30%;
+    margin-right: 21px;
+    padding-top: 2px;
+    vertical-align: top;
+}
+
+.personal-info-item .key p{
+    font-weight: 700;
+}
+
+.personal-info-item .value{
+    position: relative;
+    width: 60%;
+}
+
+/*---------------------------------------------------Work History */
+
+.history-heading{
+    color: black;
+    margin-bottom: 50px;
+}
+
+.timeline-item{
+    padding: 4em 2em 0em 2em;
+    position: relative;
+    color: black;
+    border-left: 1px solid;
+}
+
+.timeline-item p{
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item:before {
+    content: attr(data-dates);
+    position: absolute;
+    left: 2.5em;
+    top: 3em;
+    display: block;
+    font-family: "Exo", sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    padding: 0;
+    margin:0;
+}
+
+.timeline-item:after{
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: 2.4em;
+    position: absolute;
+    left: -6px;
+    border-radius: 12px;
+    content: '';
+    background-color: black;
+} 
+
+.history-items{
+    margin-bottom: 30px;
+}
+
+/*------------------Progress bars ------------------ */
+
+.progress{
+    position: relative;
+    height: 25px;
+    margin-bottom: 4px;
+}
+
+.progress-type{
+    position: absolute;
+    left: 0px;
+    font-weight: 400;
+    padding: 3px 30px 2px 10px;
+    color: #fafafa;
+    font-size: 1rem;
+    padding-top: 13px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.progress-section{
+    margin: 40px 20px;
+}
