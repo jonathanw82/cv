@@ -30,7 +30,9 @@ Contact
                     <textarea  rows="5" name="message_html" id="projectsummery" placeholder="Project description" class="form-control" required></textarea>
                     <div class="form-row text-center">
                         <div class="col">
-                            <button type="submit" class="btn btn-secondary">Send Project Request</button>
+                            <div class="messageSent" id="messageSent"></div>
+                            <button type="submit" class="btn btn-secondary" >Send Project Request</button> 
+                            <span class="spinner" id="spinner"></span>
                         </div>
                     </div>
                 </form>
