@@ -85,6 +85,19 @@
     margin-bottom: 30px;
 }
 
+.job-title:hover{
+    cursor: pointer;
+    color: green;
+}
+
+.hideMe{
+    display: none;
+}
+
+.showMe{
+    display: show;
+}
+
 /*------------------Progress bars ------------------ */
 
 .progress{
