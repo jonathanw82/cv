@@ -30,15 +30,15 @@
 <body class="{{ background }}"> <!--Displays background image on selected page -->
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand nav-item-name nav-name-mobile" href="{{ url_for('index') }}">Jonathan Wheway</a>
-			<a class="navbar-brand nav-item-name nav-name-mobile1" href="{{ url_for('index') }}">Jon Wheway</a>
+			<a class="navbar-brand nav-item-name nav-name-mobile" href="{{ url_for ('index') }}">Jonathan Wheway</a>
+			<a class="navbar-brand nav-item-name nav-name-mobile1" href="{{ url_for ('index') }}">Jon Wheway</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">	
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse nav-bar-center" id="navbarNavAltMarkup">
 			  <div class="navbar-nav">
-				<a class="nav-item nav-link test" href="{{ url_for('index') }}"><i class="fa fa-home nav-icon" aria-hidden="true"></i><br><span> About</span></a>
-				<a class="nav-item nav-link" href="{{ url_for('resume') }}"><i class="fa fa-graduation-cap nav-icon" aria-hidden="true"></i><br><span> Resume</span></a>
+				<a class="nav-item nav-link test" href="{{ url_for ('index') }}"><i class="fa fa-home nav-icon" aria-hidden="true"></i><br><span> About</span></a>
+				<a class="nav-item nav-link" href="{{ url_for ('resume') }}"><i class="fa fa-graduation-cap nav-icon" aria-hidden="true"></i><br><span> Resume</span></a>
 				<a class="nav-item nav-link" href="{{ url_for ('github') }}"><i class="fab fa-github nav-icon"></i><br><span> GitHub</span></a>
 				<a class="navbar-brand nav-item-name nav-name-desktop" href="{{ url_for('index') }}">Jonathan Wheway</a>
 				<a class="nav-item nav-link" href="{{ url_for ('hobbies') }}"><i class="fas fa-seedling nav-icon" aria-hidden="true"></i><br><span> Hobbies</span></a>
