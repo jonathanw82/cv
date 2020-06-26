@@ -5,6 +5,10 @@
 Contact
 {%endblock%}
 
+{% block css %}
+<link rel="stylesheet" href="{{url_for ('static', filename='css/contact.css')}}" type="text/css">
+{% endblock %}
+
 {% block js %}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
     <script type="text/javascript">

@@ -3,15 +3,25 @@
 
 {% block title%}
 GitHub
-
 {%endblock%}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for ('static', filename='css/github.css')}}" type="text/css">
+{% endblock %}
 
 {% block content %}
   <div class="container-fluid bg-image-github">
 
+    <h1>Githbb</h1>
 
-
-
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-4">
+                  <div id="gh-user-data"></div>
+                  <div id="gh-repo-data"></div>
+              </div>
+          </div>
+      </div>
 
 
   </div>
@@ -21,6 +31,6 @@ GitHub
 
 {% block script %}
 
-<script></script>
+<script src="{{url_for('static', filename='js/github.js')}}"></script>
 
 {% endblock %}
