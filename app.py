@@ -1,7 +1,13 @@
 import os
 from flask import Flask, render_template, request
+from os import path
+if path.exists("env.py"):
+    import env
 
 app = Flask(__name__)
+
+
+app.secret_key = os.getenv("GITHUB_SECRET_KEY")
 
 
 @app.route("/")
@@ -18,8 +24,9 @@ def resume():
 
 @app.route("/github") 
 def github():
-    return render_template("github.html", page_title="GitHub", background='bg-image-github')
-
+    data = {app.secret_key}
+    return render_template("github.html", page_title="GitHub")
+##, background='bg-image-github'
 
 @app.route("/hobbies") 
 def hobbies():
