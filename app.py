@@ -29,7 +29,7 @@ def github():
 
 @app.route("/hobbies") 
 def hobbies():
-    return render_template("Hobbies.html", page_title="Hobbies")
+    return render_template("hobbies.html", page_title="Hobbies")
 
 
 @app.route("/contact") 
