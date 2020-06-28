@@ -1,7 +1,7 @@
 /*----------------------- GitHub --------------------- */
-/* 
+
 .bg-image-github{
-    background-image: url('/static/images/github.jpg');
+    background-image: url('/static/images/githubbackimage.png');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -10,10 +10,11 @@
     z-index: -1;
     width: 100%;
     min-height: 100vh;
-} */
+}
 
 .git-heading{
     text-align: center;
+    color: #ffff;
 }
 
 
@@ -32,7 +33,7 @@
     cursor: pointer; 
   }
 
-  .spinner {
+.spinner {
     position: absolute;
     left: 50%;
     top: 50%;
