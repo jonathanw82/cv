@@ -13,7 +13,6 @@ app.secret_key = os.getenv("GITHUB_SECRET_KEY")
 @app.route("/")
 def index():
     page = 'home'
-
     return render_template("index.html", page_title="Home", pagename=page)
 
 

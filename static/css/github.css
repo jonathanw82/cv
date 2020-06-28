@@ -1,4 +1,11 @@
-/*----------------------- GitHub --------------------- */
+
+/*-------------------------- Body ----------------------------*/
+
+.emptyDiv{
+    height: 50px;
+}
+
+/*------------------------- GitHub --------------------------- */
 
 .bg-image-github{
     background-image: url('/static/images/githubbackimage.png');
