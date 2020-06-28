@@ -65,7 +65,7 @@ function displayGitHubData(github_repo_return){
            language = "Language Not Detected";
        }
 
-       document.getElementById('displayRepos').innerHTML += `<div class="col-sm-4"><div class="diaplayRepos"><a href="${repoURL}" target="_blank">${repoName}</a><br>${created}
-                                                    <br>${updated}<br>${language}</div></div>`;
+       document.getElementById('displayRepos').innerHTML += `<div class="col-sm-4"><div class="diaplayRepos"><a href="${repoURL}" target="_blank">${repoName}</a><br> Created: ${created}
+                                                    <br>Last Updated: ${updated}<br>${language}</div></div>`;
     };
 }
