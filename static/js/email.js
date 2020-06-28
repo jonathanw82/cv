@@ -4,8 +4,8 @@ window.onload = function() {
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
         // generate the contact number value
-        document.getElementById('overlayBox').innerHTML = `<div id="overlay"> <div class="spinner" id="spinner">
-        <iframe src="https://giphy.com/embed/d9QiBcfzg64Io" frameBorder="0" class="pacmanSpinner"></iframe></div>`;
+        document.getElementById('overlayBox').innerHTML = `<div id="overlay"><div class="spinner" id="spinner">
+        <iframe onclick="none" src="https://giphy.com/embed/d9QiBcfzg64Io" frameBorder="0" class="pacmanSpinner"></iframe></div><span class="loadingText">LOADING PLEASE WAIT!</span>`;
         this.contact_number.value = Math.random() * 100000 | 0;
         emailjs.sendForm('outlook', 'jon_contact', this)
         .then(function(response) {

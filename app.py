@@ -24,7 +24,6 @@ def resume():
 
 @app.route("/github") 
 def github():
-    data = {app.secret_key}
     return render_template("github.html", page_title="GitHub")
 ##, background='bg-image-github'
 

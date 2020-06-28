@@ -12,15 +12,16 @@ GitHub
 {% block content %}
   <div class="container-fluid bg-image-github">
 
-    <h1>Githbb</h1>
-
       <div class="container">
-          <div class="row">
-              <div class="col-sm-4">
-                  <div id="gh-user-data"></div>
-                  <div id="gh-repo-data"></div>
-              </div>
+        <div class="row">
+          <span id="overlayBox"></span>
+          <div class="col-sm-12 git-heading">
+            <h2>GitHub</h2>
+            <p>Please note some of these repos are works in progress or for testing purpose only.</p>
+            <span id="warning"></span>
           </div>
+        </div>
+          <div class="row" id="displayRepos"></div>
       </div>
 
 
