@@ -2,7 +2,7 @@
 /*-------------------------- Body ----------------------------*/
 
 .emptyDiv{
-    height: 50px;
+    height: 70px;
 }
 
 /*------------------------- GitHub --------------------------- */
@@ -26,6 +26,12 @@
 
 .diaplayRepos{
     color: #fff;
+}
+
+/*------------------------- GitHub cards ----------------------- */
+.card-col{
+    padding-top: 15px;
+    text-align: -webkit-center;
 }
 
 

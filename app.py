@@ -1,13 +1,8 @@
 import os
 from flask import Flask, render_template, request
-from os import path
-if path.exists("env.py"):
-    import env
+
 
 app = Flask(__name__)
-
-
-app.secret_key = os.getenv("GITHUB_SECRET_KEY")
 
 
 @app.route("/")
@@ -38,7 +33,7 @@ def contact():
 
 @app.errorhandler(404)
 def page_not_found(error):
-   return render_template('404.html', page_title = '404')
+   return render_template("404.html", page_title ="404")
 
 
 if __name__ == "__main__":

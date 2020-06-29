@@ -61,11 +61,18 @@ function displayGitHubData(github_repo_return){
        let updated = github_repo_return[i].updated_at;
        let language = github_repo_return[i].language;
 
+        // if the programming language is not present display Language Not Detected.
        if (language == null){
            language = "Language Not Detected";
        }
 
-       document.getElementById('displayRepos').innerHTML += `<div class="col-sm-4"><div class="diaplayRepos"><a href="${repoURL}" target="_blank">${repoName}</a><br> Created: ${created}
-                                                    <br>Last Updated: ${updated}<br>${language}</div></div>`;
-    };
-}
+       document.getElementById('displayRepos').innerHTML += `<div class="col-lg-4 col-md-6 card-col"><a href="${repoURL}" target="_blank"><div class="card" style="width: 18rem;">
+        <img class="card-img-top" id="cardImageSrc" src="https://image.flaticon.com/icons/svg/25/25231.svg" alt="Card image cap">
+        <div class="card-body"><h5 class="card-title">${repoName}</h5>
+          <p class="card-text">Created: ${created} <br>Last Updated: ${updated}<br>${language}</p></div></div></a></div>`;
+        };
+    }
+    
+    //    document.getElementById('displayRepos').innerHTML += `<div class="col-sm-4"><div class=" diaplayRepos"><a href="${repoURL}" target="_blank">${repoName}</a><br> Created: ${created}
+    //                                                 <br>Last Updated: ${updated}<br>${language}</div></div>`;
+ 
