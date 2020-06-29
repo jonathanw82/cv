@@ -1,0 +1,55 @@
+
+.background-colour{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.errorimage{
+    width: 60%;
+    height: auto;
+}
+
+.errorHeading{
+    color: #ffff;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
+.underText{
+    color: #ffff;
+    font-size: 1.5rem;
+    padding-top: 10px;
+}
+
+.underDiv{
+    text-align: center;
+}
+
+.errorDiv{
+    text-align: center;
+}
+
+ /* ------------------- Media Queries contact.html -----------------*/
+
+@media only screen and (max-width: 425px){
+    
+    .errorimage{
+        width: 100%;
+        height: auto;
+    }
+    
+    .underText{
+        font-size: 1.3rem;
+    }
+    
+}    
+
+@media only screen and (max-width: 375px){
+
+    .underText{
+        font-size: 1.3rem;
+    }
+    
+    
+}  
