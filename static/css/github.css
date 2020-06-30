@@ -39,6 +39,11 @@
    width: 18rem;
 }
 
+.backToTopButton{
+    text-align: center;
+    padding-top: 10px;
+}
+
 /*-------------------- GitHub loading spinner ------------------ */
 
 #overlay {
