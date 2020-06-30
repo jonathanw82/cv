@@ -28,12 +28,16 @@
     color: #fff;
 }
 
+
 /*------------------------- GitHub cards ----------------------- */
 .card-col{
     padding-top: 15px;
     text-align: -webkit-center;
 }
 
+.card{
+   width: 18rem;
+}
 
 /*-------------------- GitHub loading spinner ------------------ */
 
@@ -107,5 +111,14 @@
     .loadingText{
         font-size: 1.6rem;
     }
+
+    .card{
+        width: 17rem;
+    }
+
+    .card-col{
+        padding-left: 10px;
+    }
+
     
 }  

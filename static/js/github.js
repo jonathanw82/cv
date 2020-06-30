@@ -50,7 +50,6 @@ function displayGitHubData(github_repo_return){
    // Total repos are displayed by this hTML injection
     let total_repos = github_repo_return.length;
     document.getElementById('repoNumbers').innerHTML = `<p>Total number of Repositories to display ${total_repos}</p>`;
-    console.log(github_repo_return);
     
     for (let i = 0; i < github_repo_return.length; i++){
         // this for loop iterates through the array sent from github and disaplayes the data 
@@ -66,7 +65,7 @@ function displayGitHubData(github_repo_return){
            language = "Language Not Detected";
        }
 
-       document.getElementById('displayRepos').innerHTML += `<div class="col-lg-4 col-md-6 card-col"><a href="${repoURL}" target="_blank"><div class="card" style="width: 18rem;">
+       document.getElementById('displayRepos').innerHTML += `<div class="col-lg-4 col-md-6 card-col"><a href="${repoURL}" target="_blank"><div class="card">
         <img class="card-img-top" id="cardImageSrc" src="https://image.flaticon.com/icons/svg/25/25231.svg" alt="Card image cap">
         <div class="card-body"><h5 class="card-title">${repoName}</h5>
           <p class="card-text">Created: ${created} <br>Last Updated: ${updated}<br>${language}</p></div></div></a></div>`;

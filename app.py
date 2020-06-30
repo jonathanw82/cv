@@ -7,8 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    page = 'home'
-    return render_template("index.html", page_title="Home", pagename=page)
+    return render_template("index.html", page_title="Home")
 
 
 @app.route("/resume") 
@@ -19,7 +18,7 @@ def resume():
 @app.route("/github") 
 def github():
     return render_template("github.html", page_title="GitHub")
-##, background='bg-image-github'
+
 
 @app.route("/hobbies") 
 def hobbies():

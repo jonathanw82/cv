@@ -6,29 +6,23 @@ function selectjob(company){
 
     if (company == 'slx'){
         document.getElementById('jobinfo').innerHTML = slxjobroll;
-        document.getElementById('jobinfo').className = "row show";
-        document.getElementById('workhistory').className = "hide";
     }
     else if (company == 'wogan'){
         document.getElementById('jobinfo').innerHTML = woganjobroll;
-        document.getElementById('jobinfo').className = "row show";
-        document.getElementById('workhistory').className = "hide";
     }
     else if (company == 'jnc'){
         document.getElementById('jobinfo').innerHTML = jncjobroll;
-        document.getElementById('jobinfo').className = "row show";
-        document.getElementById('workhistory').className = "hide";
     }
     else if (company == 'mendip'){
         document.getElementById('jobinfo').innerHTML = mendipjobroll;
-        document.getElementById('jobinfo').className = "row show";
-        document.getElementById('workhistory').className = "hide";
     }
     else if (company == 'avocet'){
         document.getElementById('jobinfo').innerHTML = avocetjobroll;
-        document.getElementById('jobinfo').className = "row show";
-        document.getElementById('workhistory').className = "hide";
     }
+
+    document.getElementById('jobinfo').className = "row show";
+    document.getElementById('workhistory').className = "hide";
+    document.getElementById('backbutton').className = "show";
 };
 
 function back(){
@@ -36,6 +30,7 @@ function back(){
     // hide or show parts of the dom. In this case it hides the jobinfo and displays the work history.
     document.getElementById('workhistory').className = "row show";
     document.getElementById('jobinfo').className = "hide";
+    document.getElementById('backbutton').className = "hide";
 }
 
 // There variables contain the relevent infomation for each job roll and when
@@ -57,7 +52,6 @@ function back(){
                             Fault finding and repair of top-line theatre equipment (Including digital moving head lighting,
                             led par cans, audio equipment, stage rigging and high intensity power distribution.
                         </li>
-                        <div class="backbutton"><a onclick="back()">Back</a></div>
                     </div>`;
 
 
@@ -79,7 +73,6 @@ var woganjobroll =  ` <div class="col-lg-4 card-col">
                         <li>
                             Installation Of new and used machinery. 
                         </li>
-                        <div><a onclick="back()">Back</a></div>
                     </div>`;
 
 
@@ -116,7 +109,6 @@ var jncjobroll = `<div class="col-lg-4 card-col">
                         <li>
                         	Support maintenance of the workshop and workshop equipment. 
                         </li>                 
-                        <div><a onclick="back()">Back</a></div>
                     </div>`;
 
 
@@ -157,7 +149,6 @@ var mendipjobroll = `<div class="col-lg-4 card-col">
                         <li>
                         	Driving Vans (Including Luton) up to 3.5t to move machines.  
                         </li>               
-                        <div><a onclick="back()">Back</a></div>
                     </div>`; 
 
                     
@@ -192,7 +183,6 @@ var avocetjobroll = `<div class="col-lg-4 card-col">
                         </li> 
                         <li>
                         	Repair and service of audio visual equipment (Including, Martin, Abstract, Chauvet, le Maitre, 
-                            Technics, Robe, Sennheiser, Denon, Pioneere, Rodec, Pearl and Thomas and Media theme). 
+                            Technics, Robe, Sennheiser, Denon, Pioneere, Rodec, Pearl, Thomas and Media theme). 
                         </li>               
-                        <div><a onclick="back()">Back</a></div>
                     </div>`;    
