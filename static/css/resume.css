@@ -2,99 +2,15 @@
     text-transform: uppercase;
 }
 
-/*--------------- Personal Info ------------------ */
-
-.personal-info-item{
-    margin-bottom: 20px;
-    display: block;
-    clear: both;
+.emptyDiv{
+    height: 80px;
 }
 
-.personal-info-item .key,
-.personal-info-item .value{
-    padding-right: 8px;
-    display: inline-block;
-}
-
-.personal-info-item .key p,
-.personal-info-item .value p{
-    margin: 0;
-}
-
-.personal-info-item .key{
-    width: 30%;
-    margin-right: 21px;
-    padding-top: 2px;
-    vertical-align: top;
-}
-
-.personal-info-item .key p{
-    font-weight: 700;
-}
-
-.personal-info-item .value{
-    position: relative;
-    width: 60%;
-}
-
-/*---------------------------------------------------Work History */
-
-.history-heading{
-    color: black;
-    margin-bottom: 50px;
-}
-
-.timeline-item{
-    padding: 4em 2em 0em 2em;
-    position: relative;
-    color: black;
-    border-left: 1px solid;
-}
-
-.timeline-item p{
-    padding: 0;
-    margin: 0;
-}
-
-.timeline-item:before {
-    content: attr(data-dates);
-    position: absolute;
-    left: 2.5em;
-    top: 3em;
-    display: block;
-    font-family: "Exo", sans-serif;
-    font-weight: 500;
-    font-size: 0.8em;
-    padding: 0;
-    margin:0;
-}
-
-.timeline-item:after{
-    width: 12px;
-    height: 12px;
-    display: block;
-    top: 2.4em;
-    position: absolute;
-    left: -6px;
-    border-radius: 12px;
-    content: '';
-    background-color: black;
-} 
-
-.history-items{
-    margin-bottom: 30px;
-}
-
-.job-title:hover{
-    cursor: pointer;
-    color: green;
-}
-
-.hideMe{
+.hide{
     display: none;
 }
 
-.showMe{
+.show{
     display: show;
 }
 
@@ -119,4 +35,48 @@
 
 .progress-section{
     margin: 40px 20px;
+}
+
+.section-heading{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sub-heading{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
+.reasons-heading{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+
+/*------------------------- Job history cards ----------------------- */
+.card-col{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: -webkit-center;
+}
+
+.card-img-top{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid lightgray;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.jobrespon{
+    padding-top: 10px;
+}
+
+.backbutton{
+    float: right;
 }

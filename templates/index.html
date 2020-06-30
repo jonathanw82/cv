@@ -2,7 +2,7 @@
 {%  extends 'base.html' %}
 
 {% block title %}
-About
+Home
 {%endblock%}
 
 {% block css %}
@@ -31,7 +31,7 @@ About
                 part of a team or on my own initiative.</p>
             <p class="about-heading">Contact Me</p>
             <p class="about-text">
-                For more infomation contact me on <span class="email-address">Jonwhewaycode@gamil.com</span> or use the contact tab above.
+                For more infomation contact me on <a href="{{ url_for ('contact') }}"><span class="email-address">Jonwhewaycode@gmail.com</span></a>.
             </p>
         </div>
     </div>
