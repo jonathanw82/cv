@@ -16,6 +16,9 @@
     display: show;
 }
 
+.whitespace{
+    height: 50px;
+}
 
 /*------------------Progress bars ------------------ */
 
@@ -38,12 +41,16 @@
 
 .progress-section{
     margin: 40px 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    border: 1px solid lightgray; 
 }
 
 .section-heading{
     text-align: center;
     padding-top: 10px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -59,6 +66,29 @@
     font-size: 1.5rem;
 }
 
+/*------------------------- Education ----------------------- */
+
+.educationImages{
+    width: 50%;
+    height: auto;
+}
+
+.educationHeading{
+    padding-top: 10px;
+}
+
+.image-eduction{
+   text-align: center;
+   margin: auto;
+}
+
+.educationRow{
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    border: 1px solid lightgray; 
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
 
 /*------------------------- Job history cards ----------------------- */
 
@@ -94,7 +124,7 @@
 
 .backToTopButton{
     text-align: center;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 
 
@@ -105,11 +135,19 @@
     .jobrespon{
         text-align: center;
     }
+
+    .mobilCompanyInfo{
+        text-align: center;
+    }
 }    
 
 @media only screen and (max-width: 425px){
- 
-}    
+    
+    .educationInfo{
+    text-align: center!important;
+}
+
+}   
 
 @media only screen and (max-width: 320px){
 

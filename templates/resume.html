@@ -60,7 +60,9 @@ Resume
                 <div class="col-10">
                     <div class="reasons-heading ">Front End</div>
                     <p> I'm skilled in User Experience Design using the trinity of Html5, Css3, Javascript, jQuery,
-                        Bootstrap and Materializ. I can also utilize wireframe software such as Balsamiq.
+                        Bootstrap and Materializ. I can also utilize wireframe software such as Balsamiq and graphics
+                        sofware
+                        such as Photoshop.
                     </p>
                 </div>
             </div>
@@ -130,15 +132,57 @@ Resume
     </div>
     <hr> <!-- horizontal line  -->
 
-    <!--============================ company Info ============================-->
+    <div class="whitespace"></div>
+    <!--=========================== Education Info ===========================-->
 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="section-heading">Education & Certification</h3>
+            </div>
+        </div> 
+        <div class="row educationRow">
+            <div class="col-md-4 image-eduction">
+                <img class="educationImages" src="/static/images/ci.png" alt="Code instute image">
+            </div>
+            <div class="col-md-8 educationInfo">
+                <h5 class="educationHeading">Code Institute</h5>
+                <div>Diploma in Full Stack Web Development</div>
+                <span class="text-muted">January 2020 - May 2020</span>
+                <li>
+                    <a href="" target="_blank">Diploma in Full Stack Web Development</a>
+                </li>
+                <li>
+                    <a href="https://www.credential.net/bf0dadb8-9ffe-4e26-935f-bcdea942e175#gs.955tkk"
+                        target="_blank">Diploma in Tech Fundamentals</a>
+                </li>
+            </div>
+        </div>
+        <div class="row educationRow">
+            <div class="col-md-4 image-eduction">
+                <img class="educationImages" src="/static/images/bwc.jpg" alt="Bw College image">
+            </div>
+            <div class="col-md-8 educationInfo">
+                <h5 class="educationHeading">Bridgwater College</h5>
+                <div>City & Guilds in Sound Engineering <br> Parts 1 & 2</div>
+                <span class="text-muted">September 1998 - June 2000</span>
+                <li>
+                    City & Guilds Pass* (Highest Grade)
+                </li>
+            </div>
+        </div>
+    </div>
+    
+    <!--============================ company Info ============================-->
+    
+    <div class="whitespace"></div>
+    <!-- Html that is injected by javascript when a particular company is clicked on -->
     <div class="row" id="jobinfo"></div>
 
     <div class="row show" id="workhistory">
         <div class="col-sm-12">
             <h3 class="section-heading">Employment History</h3>
-            <p class="sub-heading">Select the company for more infomation about that certain roll and its
-                responsibilities</p>
+            <p class="sub-heading">Select the company for more infomation about responsibilities & infomation.</p>
         </div>
         <div class="col-lg-4 col-md-6 mx-auto card-col">
             <!-- onclick will fire selectjob function with the company name as the parameter and Javascript will inject work history  -->
@@ -192,8 +236,10 @@ Resume
             </div>
         </div>
     </div>
-    <div class="backToTopButton"><a class="btn btn-info bttButton" href="#top"><i class="fas fa-arrow-up"></i> Go to Top</a>
-        <span class="hide" id="backbutton"><a class="btn btn-info backbutton" onclick="back()"><i class="fas fa-arrow-left"></i> Back to Employment</a></span></div>
+    <div class="backToTopButton"><a class="btn btn-info bttButton" href="#top"><i class="fas fa-arrow-up"></i> Go to
+            Top</a>
+        <span class="hide" id="backbutton"><a class="btn btn-info backbutton" onclick="back()"><i
+                    class="fas fa-arrow-left"></i> Back to Employment</a></span></div>
 </div>
 
 <div class="emptyDiv"></div>
