@@ -1,2 +1,5 @@
 env
 env.py
+imagesStore
+__pycache__
+.vscode
