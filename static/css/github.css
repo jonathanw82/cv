@@ -39,9 +39,22 @@
    width: 18rem;
 }
 
+.card:hover{
+    border: 2px solid red;
+}
+
+.card-a{
+    text-decoration: none!important;
+}
+
 .backToTopButton{
     text-align: center;
     padding-top: 10px;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 250px;
 }
 
 /*-------------------- GitHub loading spinner ------------------ */
