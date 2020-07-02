@@ -6,9 +6,9 @@
 {%endblock%}
 
 {% block content %}
-
-<h2>{{ page_title }}</h2>
-
+<h1>No Login</h1>
+<h2>You must login to view this content</h2>
+<a href="{{url_for ('login')}}">Login here</a><a href="{{url_for ('register')}}">Register here</a>
 
 {% endblock %}
 

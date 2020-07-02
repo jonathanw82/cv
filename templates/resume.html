@@ -1,7 +1,7 @@
 {%  extends 'base.html' %}
 
 {% block title%}
-Resume
+{{ page_title }}
 {%endblock%}
 
 {% block css %}
@@ -186,7 +186,7 @@ Resume
         </div>
         <div class="col-lg-4 col-md-6 mx-auto card-col">
             <!-- onclick will fire selectjob function with the company name as the parameter and Javascript will inject work history  -->
-            <div class="card cardhover" onclick="selectjob('slx')" style="width: 18rem;">
+            <div class="card cardhover" onclick="selectjob('slx'); autoScrollToBottom()" style="width: 18rem;">
                 <img class="card-img-top" src="/static/images/slx.jpg" alt="Slx hire image">
                 <div class="card-body">
                     <h5 class="card-title">SLX Hire</h5>
@@ -196,7 +196,7 @@ Resume
             </div>
         </div>
         <div class="col-lg-4 col-md-6 mx-auto card-col">
-            <div class="card cardhover" onclick="selectjob('wogan')" style="width: 18rem;">
+            <div class="card cardhover" onclick="selectjob('wogan'); autoScrollToBottom()" style="width: 18rem;">
                 <img class="card-img-top" src="/static/images/wogan.jpg" alt="Wogan coffee image">
                 <div class="card-body">
                     <h5 class="card-title">Wogan Coffee</h5>
@@ -206,7 +206,7 @@ Resume
             </div>
         </div>
         <div class="col-lg-4 col-md-6 mx-auto card-col">
-            <div class="card cardhover" onclick="selectjob('jnc')" style="width: 18rem;">
+            <div class="card cardhover" onclick="selectjob('jnc'); autoScrollToBottom()" style="width: 18rem;">
                 <img class="card-img-top" src="/static/images/jnc.jpg" alt="Jnc image">
                 <div class="card-body">
                     <h5 class="card-title">JNC Sales</h5>
@@ -216,7 +216,7 @@ Resume
             </div>
         </div>
         <div class="col-lg-4 col-md-6 mx-auto card-col">
-            <div class="card cardhover" onclick="selectjob('mendip')" style="width: 18rem;">
+            <div class="card cardhover" onclick="selectjob('mendip'); autoScrollToBottom()" style="width: 18rem;">
                 <img class="card-img-top" src="/static/images/mendip.jpg" alt="Mendip image">
                 <div class="card-body">
                     <h5 class="card-title">Mendip Coin Co.</h5>
@@ -226,7 +226,7 @@ Resume
             </div>
         </div>
         <div class="col-lg-4 col-md-6  mx-auto card-col">
-            <div class="card cardhover" onclick="selectjob('avocet')" style="width: 18rem;">
+            <div class="card cardhover" onclick="selectjob('avocet'); autoScrollToBottom()" style="width: 18rem;">
                 <img class="card-img-top" src="/static/images/avocet.jpg" alt="Avocet image">
                 <div class="card-body">
                     <h5 class="card-title">Avocet Engineering</h5>
@@ -248,6 +248,7 @@ Resume
 
 {% block script %}
 
-<script src="{{url_for('static', filename='js/resume.js')}}"></script>
+    <script src="{{url_for('static', filename='js/resume.js')}}"></script>
+    <script src="{{url_for('static', filename='js/autoscrollto.js')}}"></script>
 
 {% endblock %}
