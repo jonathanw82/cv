@@ -4,22 +4,29 @@
 {{ page_title }}
 {%endblock%}
 
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for ('static', filename='css/login.css')}}" type="text/css">
+{% endblock %}
+
 {% block content %}
 <h1>Register</h1>
 <h2>Register Here</h2>
 <a href="{{url_for ('login')}}">Login here</a>
 
-    <form method="POST" action="{{ url_for('register') }}">
+    <form method="POST" action="{{ url_for('register') }}" onsubmit="return testk(this)">
         Username: <input type="text" name="userid" required>
         Email: <input type="email" name="email" required>
-        Password: <input type="password" name="password" required>
-        <input type="submit" value="register">
+        Password: <input type="password" name="password" id="password1" onclick="clearmessage()" required>
+        Password Confirm: <input type="password" class="" id="password2" required>
+        <div id="doNotMatch"></div>
+        <div id="submitButton"><span><input type="submit" value="register"></input></span></div>
     </form>
-
+    
 {% endblock %}
 
 {% block script %}
 
-<script></script>
+<script src="{{url_for('static', filename='js/login.js')}}"></script>
 
 {% endblock %}

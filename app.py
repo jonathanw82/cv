@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 app.config['MONGO_DBNAME'] = os.getenv('MONGO_DBNAME')
 app.config['MONGO_URI'] = os.getenv('MONGO_URI')
-# app.secret_key = os.getenv("SECRET_KEY")
+app.secret_key = os.getenv("SECRET_KEY")
 mongo = PyMongo(app)
 
 #-------------- Password login for blog ---------------------
@@ -31,6 +31,7 @@ def check_logged_in(func):
 
 
 @app.route("/register", methods=["GET", "POST"])
+@check_logged_in
 def register():
     # The GET request renders the page with the form to register.
     if request.method == "GET":
@@ -51,11 +52,47 @@ def register():
         return redirect(url_for('login'))
 
 
+""" This function directs the usert to a login box interigates the
+database and and sees if a user is registered and if the password
+and email are correct, if not a warning message is displayed.
+"""
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "GET":
         return render_template("login.html", page_title="Login")
-     elif request.method == "POST":
+
+    elif request.method == "POST":
+        """ Check to see if the Email & password are correct """
+        email = request.form['email']
+        user = mongo.db.users.find_one({'email': email})
+        if user:
+            user_password = user['password']
+            form_password = request.form['password']
+            if pbkdf2_sha256.verify(form_password, user_password):
+                session['logged-in'] = True
+                session['username'] = user['username']
+                session['email'] = email
+                return redirect(url_for('secretpage'))
+            else:
+                return redirect(url_for('loginerror'))
+        else:
+            return redirect(url_for('nologin'))
+
+
+@app.route('/loginerror')
+def loginerror():
+    """ Tells the user if there credentials are wrong."""
+    return render_template('loginerror.html', page_title="Login Error")
+
+
+@app.route("/logout")
+@check_logged_in
+def logout():
+    session.pop('logged-in', None)
+    session.pop('username', None)
+    session.pop('email', None)
+    return redirect(url_for('login'))
+
 
 @app.route("/nologin")
 def nologin():
@@ -65,9 +102,7 @@ def nologin():
 @app.route("/secretpage")
 @check_logged_in
 def secretpage():
-    return render_template("secretpage.html", page_title="Secret")
-
-
+    return render_template("secretpage.html", page_title="Secret", username=session['username'])
 
 
 #------------- Standard site wide routing -------------------

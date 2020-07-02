@@ -1,5 +1,12 @@
 colours used
 
+## Installed dependacies
+passlib, 
+dnspython,
+pyMongo,
+flask-pymongo
+
+
 ## Credit
 
 

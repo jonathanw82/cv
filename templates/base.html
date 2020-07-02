@@ -42,6 +42,9 @@
 				<a class="nav-item nav-link link-hover" href="{{ url_for ('hobbies') }}"><i class="fas fa-seedling nav-icon hobbies-icon" aria-hidden="true"></i><br><span> Hobbies</span></a>
 				<a class="nav-item nav-link link-hover" href="{{ url_for ('contact') }}"><i class="fa fa-comment-o nav-icon contact-icon" aria-hidden="true"></i><br><span> Contact</span></a>
 				<a class="nav-item nav-link link-hover" href="static/doc/JonWheway-CV-uptodate2020.pdf" target="_blank"><i class="fa fa-download nav-icon download-icon" aria-hidden="true"></i><br><span> Download</span></a>
+				{% if session['logged-in'] %}
+				<a class="nav-item nav-link link-hover" href="{{ url_for ('logout') }}"><i class="fas fa-sign-out-alt nav-icon contact-icon" aria-hidden="true"></i><br><span> Logout</span></a>
+				{% endif %}
 			</div>
 			</div>
 		  </nav>
@@ -60,7 +63,7 @@
 					<a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square footer-icon" aria-hidden="true"></i></a>
 					<a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square footer-icon" aria-hidden="true"></i></a>
 					<a href="https://github.com/jonathanw82" target="_blank"><i class="fab fa-github-square footer-icon"></i></a><br>
-					<div class="copyright-footer" >Copyright-&copy; 2019-<script> document.write(new Date().getFullYear()); </script> Jonathan Wheway</div>
+					<div class="copyright-footer" >Copyright-&copy; 2019-<script> document.write(new Date().getFullYear()); </script><a href="{{ url_for ('login') }}" id="nameLoginLink"> Jonathan Wheway</a></div>
 				</div>
 			</div>
 
