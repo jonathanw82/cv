@@ -1,5 +1,15 @@
 
 /*---------------------- Body -------------------------*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+}
+
+html{
+    height: 100%;
+}
 
 .emptyDiv{
     height: 50px;
@@ -33,13 +43,13 @@
 }
 
 footer{
-    background-color: #D99F6C!important;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    background-color: #f8f9fa!important;
     padding-top: 3px;
     text-align: center;
-    position: fixed;
+    margin-top: auto;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
 
 .footer-icon{

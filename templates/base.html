@@ -27,7 +27,7 @@
 
 <body class="{{ background }}"> <!--Displays background image on selected page -->
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar navbar-expand-lg sticky navbar-light bg-light">
 			<a class="navbar-brand nav-item-name nav-name-mobile" href="{{ url_for ('index') }}">Jonathan Wheway</a>
 			<a class="navbar-brand nav-item-name nav-name-mobile1" href="{{ url_for ('index') }}">Jon Wheway</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">	
@@ -55,7 +55,7 @@
 
 
 	{% endblock %}
-	<footer>
+	<footer id="githubHide" class="">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-12">
@@ -66,9 +66,7 @@
 					<div class="copyright-footer" >Copyright-&copy; 2019-<script> document.write(new Date().getFullYear()); </script><a href="{{ url_for ('login') }}" id="nameLoginLink"> Jonathan Wheway</a></div>
 				</div>
 			</div>
-
 		</div>
-
 	</footer>
 
 	<!--=============================================== Java Script ===================================================-->

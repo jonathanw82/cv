@@ -1,8 +1,20 @@
 
 /*-------------------------- Body ----------------------------*/
 
+body{
+ min-height: 0;   
+}
+
+.emptyDivTop{
+    height: 80px;
+}
+
 .emptyDiv{
-    height: 70px;
+    height: 20px;
+}
+
+.githubHide{
+    display: none;
 }
 
 /*------------------------- GitHub --------------------------- */
@@ -37,10 +49,13 @@
 
 .card{
    width: 18rem;
+   margin-bottom: 10px;
+   color: gray;
 }
 
 .card:hover{
-    border: 2px solid red;
+    box-shadow: inset 0px 0px 20px rgba(0,0,0,0.9);
+    color: black;
 }
 
 .card-a{
@@ -104,6 +119,19 @@
     position: absolute;
 } 
 
+.tempFooter{
+    background-color: #f8f9fa!important;
+    padding-top: 3px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    margin-top: auto;
+}
+
+.tempFooterShow{
+    display: block;
+}
 
 /* ------------------- Media Queries github.html -----------------*/
 

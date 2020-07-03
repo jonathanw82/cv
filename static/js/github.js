@@ -1,3 +1,11 @@
+/* This function  hides the orininal footer as the orininal footer would not stay at the bottom
+of the page while html was injected in to the dom, instead it is hidden and then a hard coded version 
+is then displayed via css display block once the page has loaded and the api results are back to display*/
+$(document).ready(function(){
+    document.getElementById('githubHide').className = "githubHide";
+});
+
+
 /* These Functions start automatically when the page is loaded and sends a request to the 
 gitHub API, requesting all my repos in an array, I then iterate them out with a for loop
 and inject them into the dom with template literals */
@@ -50,10 +58,12 @@ function displayGitHubData(github_repo_return) {
     // Total repos are displayed by this hTML injection
     let total_repos = github_repo_return.length;
     document.getElementById('repoNumbers').innerHTML = `<p>Total number of Repositories to display ${total_repos}</p>`;
-    console.log(github_repo_return)
+
+
+    // this for loop iterates through the array sent from github and displayes the data 
+    // on the HTML page.
     for (let i = 0; i < github_repo_return.length; i++) {
-        // this for loop iterates through the array sent from github and disaplayes the data 
-        // on the HTML page.
+        
         let repoName = github_repo_return[i].name;
         let repoURL = github_repo_return[i].html_url;
         let created = github_repo_return[i].created_at;
@@ -65,6 +75,7 @@ function displayGitHubData(github_repo_return) {
             language = "Language Not Detected";
         }
 
+        // if the repo names equal my preset names give them there coresponding images.
         if (repoName == "Can_Share") {
             repoImage = "/static/images/canshareRepoImage.jpg";
         }
@@ -92,7 +103,5 @@ function displayGitHubData(github_repo_return) {
         <div class="card-body"><h5 class="card-title">${repoName}</h5>
           <p class="card-text">Created: ${created} <br>Last Updated: ${updated}<br>${language}</p></div></div></a></div>`;
     };
+    document.getElementById('tempFooter').classList.add("tempFooterShow");
 }
-
-    //    document.getElementById('displayRepos').innerHTML += `<div class="col-sm-4"><div class=" diaplayRepos"><a href="${repoURL}" target="_blank">${repoName}</a><br> Created: ${created}
-    //                                                 <br>Last Updated: ${updated}<br>${language}</div></div>`;
