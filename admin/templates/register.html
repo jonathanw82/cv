@@ -12,9 +12,9 @@
 {% block content %}
 <h1>Register</h1>
 <h2>Register Here</h2>
-<a href="{{url_for ('login')}}">Login here</a>
+<a href="{{url_for ('admin.login')}}">Login here</a>
 
-    <form method="POST" action="{{ url_for('register') }}" onsubmit="return testk(this)">
+    <form method="POST" action="{{ url_for('admin.register') }}" onsubmit="return testk(this)">
         Username: <input type="text" name="userid" required>
         Email: <input type="email" name="email" required>
         Password: <input type="password" name="password" id="password1" onclick="clearmessage()" required>

@@ -7,9 +7,8 @@
 
 {% block content %}
 <h1>Login Please</h1>
-
-There is a problem with your login details please try again
-<form method="POST" action="{{ url_for('login') }}">
+<a href="{{ url_for ('admin.register') }}">Register</a>
+<form method="POST" action="{{ url_for('admin.login') }}">
     Email: <input type="email" name="email" required>
     Password: <input type="password" name="password" required>
     <input type="submit" value="login">
