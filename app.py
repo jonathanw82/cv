@@ -1,5 +1,6 @@
 import os
 from admin.admin import admin
+from blog.blog import blog
 from flask import Flask, render_template, request, session, redirect, url_for
 from functools import wraps
 from flask_pymongo import PyMongo
@@ -10,6 +11,7 @@ if path.exists("env.py"):
 
 app = Flask(__name__)
 app.register_blueprint(admin, url_prefix="/admin")
+app.register_blueprint(blog, url_prefix="/blog")
 
 app.config['MONGO_DBNAME'] = os.getenv('MONGO_DBNAME')
 app.config['MONGO_URI'] = os.getenv('MONGO_URI')

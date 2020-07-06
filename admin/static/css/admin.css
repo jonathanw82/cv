@@ -1,3 +1,29 @@
-body{
-    background-color: blueviolet;
+
+.management-title{
+    text-align: center;
+}
+
+.mangeBlogImage{
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+}
+
+.imagecol{
+    text-align: center;
+}
+
+.adminBlogButton{
+    float: right;
+    margin-left: 2px;
+    margin-bottom: 10px;
+}
+
+.blogrow{
+    margin-top: 4px;
+    border: 2px solid gray;
+}
+
+.emptydiv{
+    height: 80px;
 }

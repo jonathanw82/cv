@@ -35,6 +35,9 @@
 			</button>
 			<div class="collapse navbar-collapse nav-bar-center" id="navbarNavAltMarkup">
 			  <div class="navbar-nav">
+				{% if session['logged-in'] %}
+				<a class="nav-item nav-link link-hover" href="{{ url_for ('admin.management') }}"><i class="fas fa-tasks nav-icon contact-icon" aria-hidden="true"></i><br><span> Manage</span></a>
+				{% endif %}
 				<a class="nav-item nav-link link-hover" href="{{ url_for ('index') }}"><i class="fa fa-home nav-icon home-icon" aria-hidden="true"></i><br><span> Home</span></a>
 				<a class="nav-item nav-link link-hover" href="{{ url_for ('resume') }}"><i class="fa fa-graduation-cap nav-icon resume-icon" aria-hidden="true"></i><br><span> Resume</span></a>
 				<a class="nav-item nav-link link-hover" href="{{ url_for ('github') }}"><i class="fab fa-github nav-icon github-icon"></i><br><span> GitHub</span></a>

@@ -75,7 +75,7 @@ def login():
                 session['logged-in'] = True
                 session['username'] = user['username']
                 session['email'] = email
-                return redirect(url_for('admin.secretpage'))
+                return redirect(url_for('admin.management'))
             else:
                 return redirect(url_for('admin.loginerror'))
         else:
@@ -102,7 +102,8 @@ def nologin():
     return render_template("nologin.html", page_title="NoLogin")
 
 
-@admin.route("/secretpage")
+@admin.route("/management")
 @check_logged_in
-def secretpage():
-    return render_template("secretpage.html", page_title="Secret", username=session['username'])
+def management():
+    results = list(mongo.db.blog.find())
+    return render_template("management.html", page_title="Management", username=session['username'], results=results)

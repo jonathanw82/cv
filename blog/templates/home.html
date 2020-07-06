@@ -1,0 +1,36 @@
+{%  extends 'base.html' %}
+
+{% block title %}
+{{ page_title }}
+{%endblock%}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for ('blog.static', filename='css/blog.css')}}" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="clo-sm-12">
+                <div>
+                    <h1>Blog posts</h1>
+                    <a class="btn btn-primary form-button" href="{{ url_for ('blog.create')}}">Create</a>
+                    <a class="btn btn-primary form-button" href="{{ url_for ('admin.management')}}">Management</a>
+                </div>
+            </div>    
+        </div>
+        
+        <div class="row">
+            {% for b in blogs|reverse %}
+            <div class="col-sm-3">
+                <img class="blogimage" src="{{b.image}}" alt="blog image">
+                <h1>{{ b.name }}</h1>
+                <h3>{{ b.title }}</h3>
+                <span>Date Created: {{ b.created }}</span>
+                <span>Date Updated: {{ b.updated }}</span>
+                <a class="btn btn-primary form-button" href="{{ url_for ('blog.read_post', post_id=b._id)}}">Read</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock%}

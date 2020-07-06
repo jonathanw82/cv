@@ -1,0 +1,84 @@
+{%  extends 'base.html' %}
+
+{% block title%}
+{{ page_title }}
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for ('admin.static', filename='css/admin.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 management-title">
+                <h1>Management Suite</h1>
+                    <h2>Welcome {{username[0]|upper}}{{username[1:]}}</h2>
+                <a href="{{ url_for ('admin.logout') }}">logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Blogs</h2>
+                <a class="btn btn-primary form-button" href="{{ url_for ('blog.create')}}">Create</a>
+                <div class="row">
+                    <div class="col-sm-12">
+                        {% for res in results|reverse %}
+                        <div class="row blogrow">
+                            <div class="col-sm-4 imagecol">
+                                <img class="mangeBlogImage" src="{{res.image}}" alt="blog image">
+                            </div>
+                            <div class="col-sm-8">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>Name: {{ res.name }}</td>
+                                        </tr>  
+                                        <tr>  
+                                            <td>Title: {{ res.title }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Blog: {{ res.blog }}</td>
+                                        </tr> 
+                                        <tr>       
+                                            <td>Date Created: {{ res.created }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date Updated: {{ res.updated }}</td>
+                                        </tr> 
+                                        <tr> 
+                                            <td>
+                                            <a class="btn btn-warning adminBlogButton" href="{{ url_for ('blog.edit_post', post_id=res._id) }}">Edit Post</a>
+                                            <a class="btn btn-danger adminBlogButton" href="{{ url_for ('blog.delete_post', post_id=res._id) }}">Delete Post</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                        </div>    
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h2>Recipes</h2>
+                <a class="btn btn-primary form-button" href="{{ url_for ('blog.create')}}">Create</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <a class="btn btn-primary form-button" onclick="autoScrollToTop()"><i class="fas fa-arrow-up"></i> Back to Top</a>
+            </div>
+        </div>
+    </div>
+    <div class="emptydiv"></div>
+{% endblock %}
+
+
+{% block script %}
+
+<script src="{{url_for('admin.static', filename='js/admin.js')}}"></script>
+
+{% endblock %}
