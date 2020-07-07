@@ -4,29 +4,35 @@
 {{ page_title }}
 {%endblock%}
 
-
 {% block css %}
-<link rel="stylesheet" href="{{url_for ('static', filename='css/login.css')}}" type="text/css">
+<link rel="stylesheet" href="{{url_for ('admin.static', filename='css/admin.css')}}" type="text/css">
 {% endblock %}
 
 {% block content %}
-<h1>Register</h1>
-<h2>Register Here</h2>
-<a href="{{url_for ('admin.login')}}">Login here</a>
+        <div class="conatiner">
+            <div class="row">
+                <div class="col-sm-12 loginbox">
+                    <div class="loginbox1">
+                        <h5>Register</h5>
+                        <div class="loginWarning">Please note only authorised personnel can register as a new user!</div>
+                        <form method="POST" action="{{ url_for('admin.register') }}">
+                            <input type="text" name="userid" placeholder="Username:" required><br>
+                            <input type="email" name="email" placeholder="Email:" required><br>
+                            <input type="password" name="password" id="password1" placeholder="Password:" onclick="clearmessage()" required><br>
+                            <input type="password" class="" id="password2" placeholder="Confirm Password:"required>
+                            <div class="doNotMatch" id="doNotMatch"></div>
+                            <div id="submitButton"><span><Button class="btn btn-secondary loginButton" type="submit">Register</Button></span></div>    
+                            <a class="btn btn-info loginButton" href="{{ url_for ('admin.management') }}">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <form method="POST" action="{{ url_for('admin.register') }}" onsubmit="return testk(this)">
-        Username: <input type="text" name="userid" required>
-        Email: <input type="email" name="email" required>
-        Password: <input type="password" name="password" id="password1" onclick="clearmessage()" required>
-        Password Confirm: <input type="password" class="" id="password2" required>
-        <div id="doNotMatch"></div>
-        <div id="submitButton"><span><input type="submit" value="register"></input></span></div>
-    </form>
-    
 {% endblock %}
 
 {% block script %}
 
-<script src="{{url_for('static', filename='js/login.js')}}"></script>
+<script src="{{url_for('admin.static', filename='js/login.js')}}"></script>
 
 {% endblock %}

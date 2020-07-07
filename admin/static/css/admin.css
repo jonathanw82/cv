@@ -1,3 +1,50 @@
+/*--------------------- Login box -------------------------*/
+
+.loginbox1{ 
+    color: #fff;
+    background-color: rgba(60,60,60,0.5);
+    width: 35%;
+    height: auto; 
+    padding: 30px; 
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+} 
+
+.loginWarning{
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+}
+
+.doNotMatch{
+    padding-top: 5px;
+}
+
+.loginbox1{
+    border: 2px solid gray;
+}
+
+.loginbox input{
+    width: 80%;
+}
+
+.loginButton{
+    margin-top: 5px;
+    width: 50%!important;
+}
+
+.loginbox input:hover{
+    border: 2px solid #D95204;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+}
+
+
+/*-------------------- Management Suite ---------------------*/
 
 .management-title{
     text-align: center;
@@ -27,3 +74,62 @@
 .emptydiv{
     height: 80px;
 }
+
+.newuserbutton{
+    float: right;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.btt-Button{
+    color: #ffff!important;
+    margin-top: 10px;
+}
+
+.btt-row{
+    text-align: center;
+}
+/* ---------------- Media Queries landing.html ----------------*/
+
+@media only screen and (max-width: 1024px){
+    .loginbox1{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+
+    .loginbox1{
+        width: 50%;
+    }
+
+    .loginbox input{
+        width: 100%;
+    }
+}    
+
+@media only screen and (max-width: 425px){
+
+    .loginbox1{
+        width: 80%;
+    }
+}  
+
+@media only screen and (max-width: 375px){
+
+    .loginbox1{
+        width: 90%;
+    }
+
+    .loginbox input{
+        width: 100%;
+    }
+}  
+
+@media only screen and (max-width: 320px){
+
+    .loginWarning{
+        font-size: 0.9rem;
+    }
+    
+}  

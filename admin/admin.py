@@ -52,7 +52,7 @@ def register():
             'email': email,
             'password': encryptedPass,
         })
-        return redirect(url_for('login'))
+        return redirect(url_for('admin.login'))
 
 
 """ This function directs the usert to a login box interigates the
@@ -105,5 +105,29 @@ def nologin():
 @admin.route("/management")
 @check_logged_in
 def management():
+    documents = mongo.db.blog.count({})
     results = list(mongo.db.blog.find())
-    return render_template("management.html", page_title="Management", username=session['username'], results=results)
+    return render_template("management.html", page_title="Management", 
+                           username=session['username'], 
+                           results=results,
+                           numberofBlogs=documents)
+
+
+@admin.route("/registeredusers")
+@check_logged_in
+def registeredusers():
+    documents = mongo.db.users.count({})
+    results = list(mongo.db.users.find())
+    return render_template("users.html", page_title="Registered Users", 
+                           username=session['username'], results=results,
+                           docs=documents)
+
+
+@admin.route('/delete_user/<user_id>')
+@check_logged_in
+def delete_user(user_id):
+
+    """ Removes the relavent data from mongo using the id of the post"""
+
+    mongo.db.users.delete_one({'_id': ObjectId(user_id)})
+    return redirect(url_for('admin.registeredusers'))

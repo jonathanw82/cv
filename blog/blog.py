@@ -23,8 +23,11 @@ mongo = PyMongo(app)
 
 @blog.route("/")
 def home():
-   results = list(mongo.db.blog.find())
-   return render_template("home.html", page_title="Blog Home", blogs=results)
+    blogs = mongo.db.blog.count({})
+    results = list(mongo.db.blog.find())
+    return render_template("home.html", page_title="Blog Home", 
+                          blogs=results,
+                          numberofBlogs=blogs)
 
 
 @blog.route("/create", methods=['GET','POST']) 

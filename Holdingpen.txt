@@ -1,0 +1,125 @@
+  elif request.method == "POST":
+        if  request.form['password'] != request.form['password2']:
+            return redirect(url_for('register')) 
+        else:
+            username = request.form['userid']
+            email = request.form['email']
+            password = request.form['password']
+            encryptedPass = pbkdf2_sha256.hash(password)
+            mongo.db.users.insert_one({
+                'username': username,
+                'email': email,
+                'password': encryptedPass,
+            })
+            return redirect(url_for('login'))
+
+
+            
+    elif request.method == "POST":
+        username = request.form['userid']
+        email = request.form['email']
+        password = request.form['password']
+
+        if password === "null":
+            username = request.form['userid']
+            email = request.form['email']
+            password = request.form['password']
+            encryptedPass = pbkdf2_sha256.hash(password)
+            mongo.db.users.replace_one({'_id': ObjectId(user_id)},
+                {
+                'username': username,
+                'email': email,
+                'password': encryptedPass,
+            })
+            return redirect(url_for('admin.registeredusers'))
+        else:
+            username = request.form['userid']
+            email = request.form['email']
+            mongo.db.users.replace_one({'_id': ObjectId(user_id)},
+                { '$set':
+                    {
+                    'username': username,
+                    'email': email,
+                    }
+            })
+            return redirect(url_for('admin.registeredusers'))
+
+
+@admin.route("/update_user/<user_id>", methods=['GET','POST']) 
+@check_logged_in
+def update_user(user_id):
+
+    if request.method == "GET":
+        user_info = mongo.db.users.find_one({'_id': ObjectId(user_id)})
+        return render_template("updateuser.html", page_title="Update User", user_info=user_info)
+
+    elif request.method == "POST":
+        password = request.form['password']
+
+        if password == "null":
+            username = request.form['userid']
+            email = request.form['email']
+            mongo.db.users.replace_one({'_id': ObjectId(user_id)},
+                { '$set':
+                    {
+                    'username': username,
+                    'email': email,
+                    }
+            })
+            return redirect(url_for('admin.registeredusers'))
+        else:    
+            username = request.form['userid']
+            email = request.form['email']
+            password = request.form['password']
+            encryptedPass = pbkdf2_sha256.hash(password)
+            mongo.db.users.replace_one({'_id': ObjectId(user_id)},
+                {
+                'username': username,
+                'email': email,
+                'password': encryptedPass,
+            })
+            return redirect(url_for('admin.registeredusers'))
+
+            function passwordupdate(){
+    document.getElementById('pass').innerHTML = `<input type="password" name="password" id="password1" placeholder="Password:" required><br>
+                            <input type="password" class="" id="password2" placeholder="Confirm Password:" required></input>`
+}
+
+{%  extends 'base.html' %}
+
+{% block title%}
+{{ page_title }}
+{%endblock%}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for ('admin.static', filename='css/admin.css')}}" type="text/css">
+{% endblock %}
+
+{% block content %}
+        <div class="conatiner">
+            <div class="row">
+                <div class="col-sm-12 loginbox">
+                    <div class="loginbox1">
+                        <h5>Update User Info</h5>
+                        <form method="POST" action="{{ url_for('admin.update_user', user_id=user_info._id) }}">
+                            <input type="text" name="userid" placeholder="Username:" value="{{ user_info.username}}" ><br>
+                            <input type="email" name="email" placeholder="Email:" value="{{ user_info.email}}"><br>
+                            <input type="password" name="password"  value="null"><br>
+                            <div >To update password click here</div><a href='#' onclick="passwordupdate()" class="btn btn-info loginButton" >password update</a>
+                            <div id="pass"></div>
+                            <div class="doNotMatch" id="doNotMatch"></div>
+                            <div id="submitButton"><span><Button class="btn btn-secondary loginButton" type="submit">Update</Button></span></div>    
+                        </form>
+                        <a class="btn btn-info loginButton" href="{{ url_for ('admin.registeredusers') }}">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+{% block script %}
+
+<script src="{{url_for('admin.static', filename='js/login.js')}}"></script>
+
+{% endblock %}

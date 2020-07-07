@@ -1,0 +1,56 @@
+{%  extends 'base.html' %}
+
+{% block title%}
+{{ page_title }}
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for ('admin.static', filename='css/admin.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 management-title">
+            <h1>Registered Users</h1>
+            <h4>Welcome {{username[0]|upper}}{{username[1:]}}</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h4> Curent Registered Users: {{ docs }} <a class="btn btn-info newuserbutton"
+                    href="{{ url_for ('admin.register') }}">Create User</a></h4>
+        </div>
+    </div>
+    {% for res in results %}
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>Name: {{ res.username }}</td>
+                    </tr>
+                    <tr>
+                        <td>Email: {{ res.email }}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="btn btn-danger adminBlogButton"
+                                href="{{ url_for ('admin.delete_user', user_id=res._id) }}">Delete User</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="emptydiv"></div>
+{% endblock %}
+
+
+{% block script %}
+
+<script src="{{url_for('admin.static', filename='js/admin.js')}}"></script>
+
+{% endblock %}

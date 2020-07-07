@@ -4,15 +4,27 @@
 {{ page_title }}
 {%endblock%}
 
-{% block content %}
-<h1>Login Please</h1>
-<a href="{{ url_for ('admin.register') }}">Register</a>
-<form method="POST" action="{{ url_for('admin.login') }}">
-    Email: <input type="email" name="email" required>
-    Password: <input type="password" name="password" required>
-    <input type="submit" value="login">
-</form>
 
+{% block css %}
+<link rel="stylesheet" href="{{url_for ('admin.static', filename='css/admin.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="conatiner">
+        <div class="row">
+            <div class="col-sm-12 loginbox">
+                <div class="loginbox1">
+                    <h5>Login</h5>
+                    <div class="loginWarning" id="loginWarning">Please note only authorised personnel can login or register</div>
+                    <form method="POST" action="{{ url_for('admin.login') }}">
+                        <input type="email" name="email" placeholder="Email" required><br>
+                        <input type="password" name="password" placeholder="Password" required><br>
+                        <button class="btn btn-secondary loginButton" type="submit">Login</button> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
 

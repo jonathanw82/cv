@@ -4,11 +4,27 @@
 {{ page_title }}
 {%endblock%}
 
-{% block content %}
-<h1>Not Logged in</h1>
-<h2>Looks like you are not a registered user</h2>
-<a href="{{url_for ('admin.login')}}">Login here</a><a href="{{url_for ('admin.register')}}">Register here</a>
 
+{% block css %}
+<link rel="stylesheet" href="{{url_for ('admin.static', filename='css/admin.css')}}">
+{% endblock %}
+
+{% block content %}
+        <div class="conatiner">
+            <div class="row">
+                <div class="col-sm-12 loginbox">
+                    <div class="loginbox1">
+                        <h5>You Are Not Logged in!</h5>
+                        <div class="loginWarning">Please not you have to be a registered user to accsess this infomation:</div>
+                        <form method="POST" action="{{ url_for('admin.login') }}">
+                            <input type="email" name="email" placeholder="Email" required><br>
+                            <input type="password" name="password" placeholder="Password" required><br>
+                            <input class="loginButton" type="submit" value="login">    
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 {% endblock %}
 
 
