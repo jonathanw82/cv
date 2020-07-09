@@ -20,7 +20,6 @@ app.secret_key = os.getenv("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-
 @blog.route("/")
 def home():
     blogs = mongo.db.blog.count({})
@@ -51,7 +50,6 @@ def create():
             'image': image,
             'created': created,
             'updated': updated,
-
         })
         return redirect(url_for('blog.home'))
     return render_template("create.html", page_title="Create Blog")
@@ -84,13 +82,10 @@ def edit_post(post_id):
         return redirect(url_for('blog.home'))
 
 
-
 @blog.route('/delete_post/<post_id>')
 @check_logged_in
 def delete_post(post_id):
-
     """ Removes the relavent data from mongo using the id of the post"""
-
     mongo.db.blog.delete_one({'_id': ObjectId(post_id)})
     return redirect(url_for('blog.home'))
 

@@ -99,6 +99,7 @@ def logout():
 
 @admin.route("/nologin")
 def nologin():
+    """ This warns the user that they are not logged in """
     return render_template("nologin.html", page_title="NoLogin")
 
 

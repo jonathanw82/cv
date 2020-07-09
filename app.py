@@ -19,10 +19,6 @@ app.secret_key = os.getenv("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-#----------------------------------  Blog --------------------------------------
-
-
-
 #------------------------- Standard site wide routing --------------------------
 
 @app.route("/")
@@ -58,4 +54,4 @@ def page_not_found(error):
 if __name__ == "__main__":
     app.run(host=os.environ.get('IP', '127.0.0.1'),
             port=int(os.environ.get('PORT', 5000)),
-            debug=True) 
+            debug=False) 
