@@ -5,7 +5,6 @@ $(document).ready(function(){
     document.getElementById('githubHide').className = "githubHide";
 });
 
-
 /* These Functions start automatically when the page is loaded and sends a request to the 
 gitHub API, requesting all my repos in an array, I then iterate them out with a for loop
 and inject them into the dom with template literals */
@@ -58,7 +57,7 @@ function displayGitHubData(github_repo_return) {
     // Total repos are displayed by this hTML injection
     let total_repos = github_repo_return.length;
     document.getElementById('repoNumbers').innerHTML = `<p>Total number of Repositories to display ${total_repos}</p>`;
-
+    console.log(github_repo_return);
 
     // this for loop iterates through the array sent from github and displayes the data 
     // on the HTML page.
@@ -69,7 +68,7 @@ function displayGitHubData(github_repo_return) {
         let created = github_repo_return[i].created_at;
         let updated = github_repo_return[i].updated_at;
         let language = github_repo_return[i].language;
-
+     
         // if the programming language is not present display Language Not Detected.
         if (language == null) {
             language = "Language Not Detected";
@@ -93,6 +92,9 @@ function displayGitHubData(github_repo_return) {
         }
         else if (repoName == "the-honey-pot") {
             repoImage = "/static/images/honeypotrepoImage.jpg";
+        }
+        else if (repoName == "cv") {
+            repoImage = "/static/images/cvrepoiamgegithub.jpg";
         }
         else {
             repoImage = "https://image.flaticon.com/icons/svg/25/25231.svg";

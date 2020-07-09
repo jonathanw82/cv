@@ -123,3 +123,22 @@ def update_user(user_id):
 <script src="{{url_for('admin.static', filename='js/login.js')}}"></script>
 
 {% endblock %}
+
+   let languages = github_repo_return[i].languages_url;
+        
+        let api_request = new XMLHttpRequest();
+        api_request.open("GET", languages);
+        // starts the request
+        api_request.send();
+        api_request.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                let languages_back = api_request.responseText;
+                var github_repo_languages_return = JSON.parse(languages_back);
+            }
+
+            for (let j = 0; j < github_repo_languages_return.length; j++){
+
+                let languages = github_repo_languages_return[j];
+                console.log(languages);
+            }
+        }
