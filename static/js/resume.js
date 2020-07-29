@@ -194,7 +194,7 @@ var avocetjobroll = `<div class="col-lg-4 card-col">
                                 This work including hearing loop systems for local authority conference contracts.
                             </li>
                             <li>
-                                Management of company e-commerce payment systems and the company website.
+                                Management of company eCommerce payment systems and the company website.
                             </li>
                             <li>
                                 Management of warehouse and despatch operations and procedures.

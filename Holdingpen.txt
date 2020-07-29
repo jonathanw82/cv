@@ -142,3 +142,5 @@ def update_user(user_id):
                 console.log(languages);
             }
         }
+
+        GITHUB_API_KEY = os.getenv("GITHUB_API_KEY")
