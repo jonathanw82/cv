@@ -9,27 +9,32 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="clo-sm-12">
-                <div>
-                    <h4>Whats goin on!</h4>
-                    <p>Welcome to keep upto date with all thats going on my end keep an eye on my blog we have {{ numberofBlogs }} for you to checkout!</p>
-                </div>
-            </div>    
-        </div>
-        
-        <div class="row">
-            {% for b in blogs|reverse %}
-            <div class="col-sm-3">
-                <img class="blogimage" src="{{b.image}}" alt="blog image">
-                <h1>{{ b.name }}</h1>
-                <h3>{{ b.title }}</h3>
-                <span>Date Created: {{ b.created }}</span>
-                <span>Date Updated: {{ b.updated }}</span>
-                <a class="btn btn-primary form-button" href="{{ url_for ('blog.read_post', post_id=b._id)}}">Read</a>
-            </div>
-            {% endfor %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 bloghomeheading">
+                <h4>Whats goin on!</h4>
+                <p>Welcome to keep upto date with all thats going on my end keep an eye on my blog we have
+                    {{ numberofBlogs }} for you to checkout!</p>
         </div>
     </div>
+
+    <div class="row">
+        {% for b in blogs|reverse %}
+        <div class="col-lg-4 col-md-6 mx-auto card-col">
+            <a class="card-a" href="{{ url_for ('blog.read_post', post_id=b._id)}}">
+                <div class="card">
+                    <img class="card-img-top blogimage" src="{{b.image}}" alt="blog image" onerror="this.onerror=null;this.src='/static/images/noimage.png';">
+                    <div class="card-body" id="card-body">
+                        <h4 class="card-text">{{ b.title }}</h4>
+                        <span>Date Created: {{ b.created }}</span>
+                        <div class="read">Click card to read more</div>
+                    </div>
+                </div>    
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="emptydiv"></div>
 {% endblock%}

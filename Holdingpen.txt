@@ -144,3 +144,16 @@ def update_user(user_id):
         }
 
         GITHUB_API_KEY = os.getenv("GITHUB_API_KEY")
+
+             <div class="row">
+            {% for b in blogs|reverse %}
+            <div class="col-sm-3">
+                <img class="blogimage" src="{{b.image}}" alt="blog image">
+                <h1>{{ b.name }}</h1>
+                <h3>{{ b.title }}</h3>
+                <span>Date Created: {{ b.created }}</span>
+                <span>Date Updated: {{ b.updated }}</span>
+                <a class="btn btn-primary form-button" href="{{ url_for ('blog.read_post', post_id=b._id)}}">Read</a>
+            </div>
+            {% endfor %}
+        </div>

@@ -19,38 +19,36 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-6">
-                <h2>Blogs {{ numberofBlogs }}</h2>
+            <div class="col-sm-12">
+                <h2>Blogs Available {{ numberofBlogs }}</h2>
                 <a class="btn btn-primary form-button" href="{{ url_for ('blog.create')}}">Create</a>
                 <div class="row">
                     <div class="col-sm-12">
                         {% for res in results|reverse %}
                         <div class="row blogrow">
                             <div class="col-sm-4 imagecol">
-                                <img class="mangeBlogImage" src="{{res.image}}" alt="blog image">
+                                <img class="mangeBlogImage" src="{{res.image}}" alt="blog image" onerror="this.onerror=null; this.src='/static/images/noimage.png';">
                             </div>
                             <div class="col-sm-8">
                                 <table class="table">
                                     <tbody>
-                                        <tr>
-                                            <td>Name: {{ res.name }}</td>
-                                        </tr>  
                                         <tr>  
-                                            <td>Title: {{ res.title }}</td>
+                                            <td><strong>Title:</strong> {{ res.title }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Blog: {{ res.blog }}</td>
+                                            <td><strong>Blog:</strong> {{ res.blog }}</td>
                                         </tr> 
                                         <tr>       
-                                            <td>Date Created: {{ res.created }}</td>
+                                            <td><strong>Date Created:</strong> {{ res.created }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Date Updated: {{ res.updated }}</td>
+                                            <td><strong>Date Updated:</strong> {{ res.updated }}</td>
                                         </tr> 
                                         <tr> 
                                             <td>
                                             <a class="btn btn-warning adminBlogButton" href="{{ url_for ('blog.edit_post', post_id=res._id) }}">Edit Post</a>
-                                            <a class="btn btn-danger adminBlogButton" href="{{ url_for ('blog.delete_post', post_id=res._id) }}">Delete Post</a>
+                                            <a class="btn btn-danger adminBlogButton delbutton" data-target="#delete_modal" onclick="delfunc('{{ res.title }}','{{ res._id }}')" 
+                                            data-toggle="modal">Delete Post</a>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -61,10 +59,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <h2>Recipes</h2>
-                <a class="btn btn-primary form-button" href="{{ url_for ('blog.create')}}">Create</a>
-            </div>
         </div>
         <div class="row">
             <div class="col-sm-12 btt-row">
@@ -73,6 +67,32 @@
         </div>
     </div>
     <div class="emptydiv"></div>
+
+    <!-- Delete Modal -->
+	<div class="modal fade" id="delete_modal" tabindex="-1" role="dialog" aria-labelledby="delete_modal"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="modalimagebox">
+                        <img class="delete-modal-warning-image" src="/admin/static/images/warning.png" alt="warning image">
+                        <h5 class="card-title">Warning</h5>
+                        <p id='warning-p'></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 warning_modal_buttons">
+                        <a id='warning-a' class="btn btn-primary modal-button" href="">Yes</a>
+                    </div>
+                    <div class="col-sm-6 warning_modal_buttons">
+                        <a class="btn btn-primary modal-button" href="{{url_for ('admin.management')}}">No</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 

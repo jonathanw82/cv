@@ -1,4 +1,111 @@
-.blogimage{
-    width: 250px;
-    height: auto;
+.card-col{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: -webkit-center;
+}
+
+.card-img-top{
+    object-fit: cover;
+    width: 100%;
+    height: 250px; 
+}
+
+.card-body{
+    height: 150px;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    width: 18rem;
+    color: gray;
+}
+
+.card:hover{
+    box-shadow: inset 0px 0px 20px rgba(0,0,0,0.9);
+    color: black;
+}
+
+.card-a:hover{
+    text-decoration: none!important;
+}
+
+.emptydiv{
+    height: 60px;
+}
+
+.bloghomeheading{
+    text-align: center;
+}
+
+.read{
+    padding-top: 5px;
+}
+
+.headspace{
+    height: 15px;
+} 
+
+.blog-date-button{
+    text-align: right;
+}
+
+/* ----------------------- Read blogs ----------------------*/
+
+.blogimage-post{
+    max-width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.read-container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.image-field{
+    margin-bottom: 5px;
+}
+/* ------------------- Media Queries blogs -----------------*/
+
+@media only screen and (max-width: 1024px){
+    .read-blog{
+        padding-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .read-blog{
+        padding-left: 100px;
+    }
+}    
+
+@media only screen and (max-width: 425px){
+    .read-blog{
+        padding-left: 15px;
+        text-align: center;
+    }
+
+    .blogimage-post-image{
+        text-align: center;
+    }    
+
+    .blog-date-button{
+        text-align: center;
+    }
+}   
+
+@media only screen and (max-width: 320px){
+
+    .blogimage{
+        text-align: center;
+    }
+
+    .card{
+        width: 17rem;
+    }
+   
 }

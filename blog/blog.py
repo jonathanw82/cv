@@ -37,14 +37,12 @@ def create():
         return render_template("create.html", page_title="Create")
     elif request.method == "POST":
         now = datetime.now()
-        name = request.form['blog_name']
         title = request.form['blog_title']
         blog = request.form['blog_info']
         image = request.form['image_url']
         created = now.strftime("%d/%m/%Y %H:%M:%S")
         updated = now.strftime("%d/%m/%Y %H:%M:%S")
         mongo.db.blog.insert_one({
-            'name': name,
             'title': title,
             'blog': blog,
             'image': image,
@@ -72,7 +70,6 @@ def edit_post(post_id):
         now = datetime.now()
         blog_post.replace_one({'_id': ObjectId(post_id)},
                 {
-                'name': request.form['blog_name'],
                 'title': request.form['blog_title'],
                 'blog': request.form['blog_info'],
                 'image': request.form['image_url'],
@@ -87,7 +84,7 @@ def edit_post(post_id):
 def delete_post(post_id):
     """ Removes the relavent data from mongo using the id of the post"""
     mongo.db.blog.delete_one({'_id': ObjectId(post_id)})
-    return redirect(url_for('blog.home'))
+    return redirect(url_for('admin.management'))
 
 
 @blog.route('/read_post/<post_id>') 

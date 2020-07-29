@@ -66,6 +66,10 @@
     margin-bottom: 10px;
 }
 
+.delbutton{
+    color: white!important;
+}
+
 .blogrow{
     margin-top: 4px;
     border: 2px solid gray;
@@ -89,6 +93,36 @@
 .btt-row{
     text-align: center;
 }
+
+/* -------------------- Warning Modal -----------------------*/
+
+.delete-modal-warning-image{
+    width: 25%;   
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.modalimagebox{
+    text-align: center;
+    color: #ffff;
+}
+
+.modal-button:hover{
+    color:yellow;
+    border-color: #D95436;
+    background-color: #36454f;
+}
+
+.warning_modal_buttons{
+   text-align: center;
+}
+
+.modal-body{
+    background-color: black;
+    border: 2px solid yellow;
+}
+
+
 /* ---------------- Media Queries landing.html ----------------*/
 
 @media only screen and (max-width: 1024px){

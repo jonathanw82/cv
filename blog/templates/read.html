@@ -9,17 +9,22 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h1>{{ display.name }}</h1>
+<div class="headspace"></div>
+<div class="container">
+    <div class="row read-container">
+            <div class="col-md-3 blogimage-post-image">
+                <img class="blogimage-post" src="{{ display.image }}" alt="blog image" onerror="this.onerror=null;this.src='/static/images/noimage.png';">
+            </div>
+            <div class="col-md-9 read-blog">
                 <h3>{{ display.title }}</h3>
                 <p>{{ display.blog }}</p>
-                <span>Date Created: {{ display.created }}</span>
-                <span>Date Updated: {{ display.updated }}</span>
-                <a class="btn btn-warning form-button" href="{{url_for ('blog.home')}}">Back</a>
+                <div class="blog-date-button">
+                    <span>Date Created: {{ display.created }}</span>
+                    <span>Date Updated: {{ display.updated }}</span>
+                    <a class="btn btn-warning form-button" href="{{url_for ('blog.home')}}">Back</a>
+                </div>
             </div>
-
-        </div>
     </div>
+</div>
+<div class="emptydiv"></div>
 {% endblock%}

@@ -12,14 +12,14 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
+            <h3>Edit Blog Post:</h3>
             <form action="{{ url_for ('blog.edit_post', post_id=post._id)}}" method="POST">
-                Blog Name: <input class="form-control" type="text" name="blog_name" value="{{ post.name }}" required>
                 Title: <input class="form-control" type="text" name="blog_title" value="{{ post.title }}" required>
-                Blog: <textarea  class="form-control" name="blog_info" rows="3" maxlength="300" placeholder="Limit 300 characters" required>{{ post.blog }}</textarea>
-                Image: <input type="text" class="form-control" name="image_url" id="image_url" value="{{ post.image }}" required>
+                Blog: <textarea  class="form-control" name="blog_info" rows="3" maxlength="1000" placeholder="Limit 1000 characters" required>{{ post.blog }}</textarea>
+                Image: <input type="text" class="form-control image-field" name="image_url" id="image_url" value="{{ post.image }}" required>
                 <input style="display: none;" name="created" value="{{ post.created }}">
                 <button type="submit" class="btn btn-primary form-button">Save</button>
-                <a class="btn btn-primary form-button" href="{{url_for ('blog.home')}}">Cancel</a>
+                <a class="btn btn-primary form-button" href="{{url_for ('admin.management')}}">Cancel</a>
             </form>
         </div>    
     </div>

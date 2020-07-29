@@ -84,6 +84,9 @@ The Contact page has navigation across the top and footer across the bottom, wit
 The download button take you to a new browser window and displays a pdf of the paper CV.
 
 
+#### Management Suite:
+The Management Suite has navigation across the top and footer across the bottom, The Management suite can only be accessed by logged in users, from clicking the name on the footer copyright and logging in via the login box. The suite consists of a user info button that allows authorised users to add or delete other users, below that is a heading that lists how many blog posts are available and a button to create new posts. Below that are the blogs that can be seen on the public hobbies page. With the picture to the left and the heading, blog, created date and updated date to the right. There are also two buttons edit and delete. On clicking delete it will launch a modal displaying the blog post name and warning that the user is about to the delete that post. If the user selects yes it is deleted from the database and the user is redirected to the management suite. If no the user will redirect back to the management suite without removing the blog from the database.
+
 ## Technology’s used will include:
 <div align="center">
    <img width="45%" height:auto;" src="static/images/logos.jpg" alt="logo image"/>
