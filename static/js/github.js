@@ -57,7 +57,6 @@ function displayGitHubData(github_repo_return) {
     // Total repos are displayed by this hTML injection
     let total_repos = github_repo_return.length;
     document.getElementById('repoNumbers').innerHTML = `<p>Total number of Repositories to display ${total_repos}</p>`;
-    console.log(github_repo_return);
 
     // this for loop iterates through the array sent from github and displayes the data 
     // on the HTML page.
@@ -105,5 +104,6 @@ function displayGitHubData(github_repo_return) {
         <div class="card-body"><h5 class="card-title">${repoName}</h5>
           <p class="card-text">Created: ${created} <br>Last Updated: ${updated}<br>${language}</p></div></div></a></div>`;
     };
+    // Shows the new footer
     document.getElementById('tempFooter').classList.add("tempFooterShow");
 }
