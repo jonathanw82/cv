@@ -157,3 +157,14 @@ def update_user(user_id):
             </div>
             {% endfor %}
         </div>
+
+jQuery
+
+$(document).ready(function(){
+	$("div").hide();
+  $("button").click(function(){
+  $("div").fadeIn({queue: false, duration: 2000});
+  $("div").animate({left: '250px'}, 2000);
+    
+  });
+});

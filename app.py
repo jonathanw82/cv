@@ -36,11 +36,6 @@ def github():
     return render_template("github.html", page_title="GitHub")
 
 
-# @app.route("/hobbies") 
-# def hobbies():
-#     return render_template("", page_title="Hobbies")
-
-
 @app.route("/contact") 
 def contact():
     return render_template("contact.html", page_title="Contact")
@@ -54,4 +49,4 @@ def page_not_found(error):
 if __name__ == "__main__":
     app.run(host=os.environ.get('IP', '127.0.0.1'),
             port=int(os.environ.get('PORT', 5000)),
-            debug=False) 
+            debug=True) 
