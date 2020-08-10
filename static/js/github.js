@@ -95,7 +95,7 @@ function displayGitHubData(github_repo_return) {
             repoImage = "/static/images/blog.jpg";
         }
         else if (repoName == "Coffee") {
-            repoImage = "/static/images/coffee.jpg";
+            repoImage = "/static/images/coffeerepoimage.jpg";
         }      
         else {
             repoImage = "https://image.flaticon.com/icons/svg/25/25231.svg";
