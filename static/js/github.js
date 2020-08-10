@@ -64,14 +64,7 @@ function displayGitHubData(github_repo_return) {
         
         let repoName = github_repo_return[i].name;
         let repoURL = github_repo_return[i].html_url;
-        let created = github_repo_return[i].created_at;
-        let updated = github_repo_return[i].updated_at;
-        let language = github_repo_return[i].language;
-     
-        // if the programming language is not present display Language Not Detected.
-        if (language == null) {
-            language = "Language Not Detected";
-        }
+        let description = github_repo_return[i].description;
 
         // if the repo names equal my preset names give them there coresponding images.
         if (repoName == "Can_Share") {
@@ -84,7 +77,7 @@ function displayGitHubData(github_repo_return) {
             repoImage = "/static/images/hydroRepoImage.jpg";
         }
         else if (repoName == "myfavoritetune") {
-            repoImage = "/static/images/musicTrackRepoImage.jpg";
+            repoImage = "/static/images/musicTrackRepoImage.jpg"
         }
         else if (repoName == "Soil_Watering") {
             repoImage = "/static/images/soilwaterRepoImage.jpg";
@@ -95,6 +88,12 @@ function displayGitHubData(github_repo_return) {
         else if (repoName == "cv") {
             repoImage = "/static/images/cvrepoiamgegithub.jpg";
         }
+        else if (repoName == "monster-rolodex") {
+            repoImage = "/static/images/rolodex.png";
+        }
+        else if (repoName == "blog") {
+            repoImage = "/static/images/blog.jpg";
+        }    
         else {
             repoImage = "https://image.flaticon.com/icons/svg/25/25231.svg";
         }
@@ -102,7 +101,7 @@ function displayGitHubData(github_repo_return) {
         document.getElementById('displayRepos').innerHTML += `<div class="col-lg-4 col-md-6 mx-auto card-col"><a class="card-a" href="${repoURL}" target="_blank"><div class="card">
         <img class="card-img-top" id="cardImageSrc" src="${repoImage}" alt="Card image cap">
         <div class="card-body"><h5 class="card-title">${repoName}</h5>
-          <p class="card-text">Created: ${created} <br>Last Updated: ${updated}<br>${language}</p></div></div></a></div>`;
+        <p class="card-text">${description}</p></div></div></a></div>`;
     };
     // Shows the new footer
     document.getElementById('tempFooter').classList.add("tempFooterShow");
