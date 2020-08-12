@@ -109,8 +109,9 @@
     cursor: pointer;
 }
 
-.cardhover:hover{
-    border: 1px solid gray;
+.card:hover{
+    box-shadow: inset 0px 0px 20px rgba(0,0,0,0.9);
+    color: black;
 }
 
 .jobrespon{

@@ -57,6 +57,10 @@ footer{
     font-size: 1.5rem;
 }
 
+.footer-icon:hover{
+    color: black!important;
+}
+
 .copyright-footer{
     color: rgb(0,0,0,.5)!important;
     font-size: 1.1rem;
@@ -68,6 +72,7 @@ footer{
 
 #nameLoginLink:hover{
     text-decoration: none;
+    color: black!important;
 }
 /* ------------------- Media Queries base.html -----------------*/
 

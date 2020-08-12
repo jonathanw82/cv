@@ -50,7 +50,7 @@ var slxjobroll = `<div class="col-lg-4 card-col">
                         <h3 class="jobrespon" id="lineUpToResp">SLX Hire & Events</h3>
                         <div><a href="https://www.slx.co.uk/" target="_blank">https://www.slx.co.uk/</a></div>
                         <span>Unit 115, Severnside Trading Estate, Burcott Rd, Avonmouth, Bristol BS11 8AF</span>
-                        <h4 >Responsibilities:</h4>
+                        <h4 >Responsibilities: Freelance Theatre Technician</h4>
                         <li>
                             Fault finding and repair of top-line theatre equipment (Including digital moving head lighting,
                             led par cans, audio equipment, stage rigging and high intensity power distribution.
@@ -59,7 +59,16 @@ var slxjobroll = `<div class="col-lg-4 card-col">
                             Inspect, test and clean all parts ready for hire. 
                         </li>
                         <li>
-                            Make bespoke wiring looms for specific shows. 
+                            Make bespoke wiring looms for customers specialized needs. 
+                        </li>
+                        <li>
+                            Pick orders for specific shows.
+                        </li>
+                        <li>
+                            Demonstrate equipment in preshow area.
+                        </li>
+                        <li>
+                            Load & unload kit to meet shows tight time criteria.
                         </li>
                     </div>`;
 
@@ -78,15 +87,24 @@ var woganjobroll = ` <div class="col-lg-4 card-col">
                     <h3 class="jobrespon" id="lineUpToResp">Wogan Coffee</h3>
                         <div><a href="https://wogancoffee.com/" target="_blank">https://wogancoffee.com</a></div>
                         <span>Roastery & Production Headquarters, 5-8 Elton Street, Bristol, BS2 9EH</span>
-                        <h4 >Responsibilities:</h4>
+                        <h4 >Responsibilities: Mobile Service Engineer</h4>
                             <li>
                                 Fault finding and repair of Espresso machines, Coffee Grinders, Water Boilers.
+                            </li>
+                            <li>
+                                Full restoration stripdown and rebuild of Espresso machines.
                             </li>
                             <li>
                                 Installation of new and used machinery. 
                             </li>
                             <li>
-                                Stock management of spare parts  
+                                Customer liaison, providing face to face and phone advice and technical support.
+                            </li>
+                            <li>
+                                Running preventative maintenance schedules and on-call evening and weekend service.
+                            </li>
+                            <li>
+                                Stock management of spare parts.  
                             </li>
                     </div>`;
 
@@ -97,7 +115,7 @@ var jncjobroll = `<div class="col-lg-4 card-col">
                         <div class="card-body">
                             <h5 class="card-title">JNC Sales</h5>
                             <h6 class="card-subtitle mb-2 text-muted">October 2014 – June 2018</h6>
-                            <p class="card-text">Mobile Service Engineer</p>
+                            <p class="card-text">Service Engineer</p>
                         </div>
                     </div>
                     </div>
@@ -105,7 +123,7 @@ var jncjobroll = `<div class="col-lg-4 card-col">
                         <h3 class="jobrespon" id="lineUpToResp">JNC Sales</h3>
                         <div><a href="http://www.jnc-sales.co.uk/" target="_blank">http://www.jnc-sales.co.uk/</a></div>
                         <span>Unit 1 CCT Building, Greensplott Road, Chittening Trading Estate, Avonmouth, Bristol, BS11 0YB</span>
-                        <h4 >Responsibilities:</h4>
+                        <h4 >Responsibilities: Service Engineer</h4>
                             <li>
                                 Fault finding and restoration coin operated equipment (Including Fruit machines, 
                                 Reel based and digital, Juke boxes; CD and Digital, Trivia machines, 
@@ -143,7 +161,7 @@ var mendipjobroll = `<div class="col-lg-4 card-col">
                     <div class="col-lg-8 mobilCompanyInfo">
                         <h3 class="jobrespon" id="lineUpToResp">Mendip Coin Co.</h3>
                         <span>Barton Lower Farm Gosling St, Barton St. David, Somerton, TA11 6GS</span>
-                        <h4 >Responsibilities:</h4>
+                        <h4 >Responsibilities: Mobile Service Engineer</h4>
                             <li>
                                 Using diagnostic systems to fault find and repair electronic machines (Including
                                 Fruit machines Reel based and digital, Juke boxes CD and Digital, Trivia machines 
@@ -187,7 +205,7 @@ var avocetjobroll = `<div class="col-lg-4 card-col">
                         <div><a href="https://www.avoeng.com" target="_blank">https://www.avoeng.com</a></div>
                         <div><a href="https://stackastage.com" target="_blank">https://stackastage.com</a></div>
                         <span>Unit 2, Elborough Farm, Banwell Road, Locking, Weston Super Mare, BS24 8PB</span>
-                        <h4 >Responsibilities:</h4>
+                        <h4 >Responsibilities: Audio Visual Engineer</h4>
                             <li>
                                 Design, build and manage installations of bespoke audio visual and lighting systems 
                                 in a range of publicly accessible venues, including concert halls, schools and clubs. 
@@ -203,10 +221,10 @@ var avocetjobroll = `<div class="col-lg-4 card-col">
                                 Stock control, including purchasing.
                             </li>
                             <li>
-                                Supervise repair and maintenance team.
+                                Supervise repair & maintenance team.
                             </li> 
                             <li>
-                                Repair and service of audio visual equipment (Including, Martin, Abstract, Chauvet, le Maitre, 
+                                Repair and service of top-line audio visual equipment (Including, Martin, Abstract, Chauvet, le Maitre, 
                                 Technics, Robe, Sennheiser, Denon, Pioneere, Rodec, Pearl, Thomas and Media theme). 
                             </li>               
                     </div>`;    

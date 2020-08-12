@@ -69,6 +69,7 @@ function displayGitHubData(github_repo_return) {
         // if the repo names equal my preset names give them there coresponding images.
         if (repoName == "Can_Share") {
             repoImage = "/static/images/canshareRepoImage.jpg";
+            // livelink = "href= 'https://jonathanw82-canshare.herokuapp.com/'"
         }
         else if (repoName == "bristol-central-gym") {
             repoImage = "/static/images/bristCentralRepoImage.jpg";
