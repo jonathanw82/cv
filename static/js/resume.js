@@ -19,6 +19,9 @@ function selectjob(company) {
     else if (company == 'avocet') {
         document.getElementById('jobinfo').innerHTML = avocetjobroll;
     }
+    else if (company == 'stage') {
+        document.getElementById('jobinfo').innerHTML = stagejobroll;
+    }
 
     document.getElementById('jobinfo').className = "row show";
     document.getElementById('workhistory').className = "hide";
@@ -228,3 +231,33 @@ var avocetjobroll = `<div class="col-lg-4 card-col">
                                 Technics, Robe, Sennheiser, Denon, Pioneere, Rodec, Pearl, Thomas and Media theme). 
                             </li>               
                     </div>`;    
+
+
+var stagejobroll = `<div class="col-lg-4 card-col">
+                    <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="/static/images/stage.jpg" alt="Stage image">
+                        <div class="card-body">
+                            <h5 class="card-title">Stage Electrics</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">January 2002 – August 2007</h6>
+                            <p class="card-text">Audio Visual Engineer</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-8 mobilCompanyInfo">
+                        <h3 class="jobrespon" id="lineUpToResp">Stage Electrics </h3>
+                        <div><a href="https://www.stage-electrics.co.uk" target="_blank">https://www.stage-electrics.co.uk</a></div>
+                        <span>Stage Electrics, Encore House, Unit 3 Britannia Rd, Patchway Trading Estate, Patchway, Bristol, BS34 5TA</span>
+                        <h4 >Responsibilities: Audio Visual Engineer</h4>
+                            <li>
+                                Receive hire equipment back into the warehouse sort and distribute to necessary teams.
+                            </li>
+                            <li>
+                                Maintain Stock control.
+                            </li>
+                            <li>
+                                Prepare power cables and lighting systems for hire.
+                            </li>
+                            <li>
+                                Work within the service department repairing lighting and sound equipment
+                            </li>             
+                    </div>`;                      
