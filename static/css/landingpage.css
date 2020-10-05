@@ -50,19 +50,28 @@
     }
 }    
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 575px){
 
+    .avatar-image{
+        width: 30%;
+        height: auto;
+    }
     .avatar-col{
         text-align: center;
+    }
+} 
+
+@media only screen and (max-width: 425px){
+    
+    .avatar-image{
+        width: 50%;
     }
 }  
 
 @media only screen and (max-width: 375px){
-
-
+   
 }  
 
 @media only screen and (max-width: 320px){
-
-    
+ 
 }  

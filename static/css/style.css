@@ -156,6 +156,9 @@ footer{
     .nav-name-mobile{
         display: none;
     }
+    .nav-name-mobile1{
+        margin-right: 5px;
+    }
 }    
 
 @media only screen and (max-width: 375px){
@@ -163,7 +166,17 @@ footer{
     .nav-item-name{
         font-size: 1.6rem;
     }
-}    
+} 
+
+@media only screen and (max-width: 362px){
+
+    .navbar-toggler-icon{
+        font-size: 1rem;
+    }
+    .nav-name-mobile1{
+        font-size: 1.5rem;
+    }
+}
 
 @media only screen and (max-width: 320px){
 
