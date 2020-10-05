@@ -10,6 +10,7 @@
 
 {% block content %}
 <div class="container">
+    <a href="#" class="scrollToTop"><i class="fas fa-arrow-up scrolltotopicon"></i></a>
     <div class="row">
         <div class="col-12">
             <h3 class="section-heading ">My Skills & Work History</h3>
@@ -35,8 +36,8 @@
                 </div>
                 <div class="col-10">
                     <div class="reasons-heading ">Other Skills</div>
-                    <p> Over the years I have gained experience in repair of white goods, 
-                        hot tub repair and maintenance, satellite installations and even 
+                    <p> Over the years I have gained experience in repair of white goods,
+                        hot tub repair and maintenance, satellite installations and even
                         refurbishment of pool tables.
                     </p>
                 </div>
@@ -59,9 +60,9 @@
                 </div>
                 <div class="col-10">
                     <div class="reasons-heading ">Front End</div>
-                    <p>I'm skilled in User Experience Design using the trinity of HTML5, CSS3, Javascript, 
-                        with technologies such as jQuery, Bootstrap and Materialize. 
-                        I can also utilise wireframe software such as Balsamiq and graphics 
+                    <p>I'm skilled in User Experience Design using the trinity of HTML5, CSS3, Javascript,
+                        with technologies such as jQuery, Bootstrap and Materialize.
+                        I can also utilise wireframe software such as Balsamiq and graphics
                         software such as Photoshop.
                     </p>
                 </div>
@@ -75,8 +76,9 @@
                 <div class="col-10">
                     <div class="reasons-heading ">Back End</div>
                     <p>
-                        I have experience in data-driven web applications. Many of my projects utilise document-based data. 
-                        I use Python and Flask in conjunction with MongoDB to process and present information. 
+                        I have experience in data-driven web applications. Many of my projects utilise document-based
+                        data.
+                        I use Python and Flask in conjunction with MongoDB to process and present information.
                         Also Python and Django with MySQL for eCommerce web based applications.
                     </p>
                 </div>
@@ -139,17 +141,20 @@
             <div class="col-sm-12">
                 <h3 class="section-heading">Education & Certification</h3>
             </div>
-        </div> 
+        </div>
         <div class="row educationRow">
             <div class="col-md-4 image-eduction">
                 <img class="educationImages" src="/static/images/ci.png" alt="Code instute image">
             </div>
             <div class="col-md-8 educationInfo">
-                <a href="https://codeinstitute.net/" target="_blank" class="educationclick"><h5 class="educationHeading">Code Institute</h5></a>
-                <div>Diploma in Full Stack Software Development  <br><span class="text-muted"> Credit-Rated by Edinburgh Napier University</span></div>
+                <a href="https://codeinstitute.net/" target="_blank" class="educationclick">
+                    <h5 class="educationHeading">Code Institute</h5>
+                </a>
+                <div>Diploma in Full Stack Software Development <br><span class="text-muted"> Credit-Rated by Edinburgh
+                        Napier University</span></div>
                 <span class="text-muted">January 2020 - May 2020</span>
                 <li>
-                    <a href="https://www.credential.net/90eded5b-5e65-48c5-9ba2-331cc224d92e#gs.ackeu7" 
+                    <a href="https://www.credential.net/90eded5b-5e65-48c5-9ba2-331cc224d92e#gs.ackeu7"
                         target="_blank">Diploma in Full Stack Software Development</a>
                 </li>
                 <li>
@@ -173,8 +178,41 @@
         </div>
     </div>
 
+    <div class="whitespace"></div>
+    <!--========================== voluntary work ===========================-->
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="section-heading">Voluntary Work</h3>
+        </div>
+    </div>
+    <div class="row educationRow">
+        <div class="col-md-4 image-eduction">
+            <img class="educationImages" src="/static/images/ebh.jpg" alt="Est bristol Hops">
+        </div>
+        <div class="col-md-8 educationInfo">
+            <h5 class="educationHeading">East Bristol Hops Community Project.</h5>
+            <p>
+                Mid-september 2020, I took the administration of a community project called East Bristol Hops Growers
+                Association.<br>
+                A collective of over 100 people, who grow hops at home, either in pots or in the ground, in their gardens or
+                allotments, balconies etc.
+                A local bristol brewery then turns the hops into a fanatstic tasting beer.
+                My position, is to keep the database of growers up to date, organise events such as socials, hops
+                collection, growers end of season party, public speaking at the events etc.<br>
+                Since taking on the position, I have created a website, reignited interest in the social media outlets,
+                started creating merchandise to push the brand and bring in needed funds, liaised with local
+                news sources to cover our events and to bring interset to the project.
+            </p>
+            <li>
+                <a href="http://www.eastbristolhops.co.uk" target="_blank">www.eastbristolhops.co.uk</a>
+            </li>
+        </div>
+    </div>
+
+
     <!--============================ company Info ============================-->
-    
+
     <div class="whitespace"></div>
     <!-- Html that is injected by javascript when a particular company is clicked on -->
     <div class="row" id="jobinfo"></div>
@@ -246,8 +284,7 @@
             </div>
         </div>
     </div>
-    <div class="backToTopButton"><a class="btn btn-info bttButton" href="#top"><i class="fas fa-arrow-up"></i> Go to
-            Top</a>
+    <div class="backToTopButton">
         <span class="hide" id="backbutton"><a class="btn btn-info backbutton" onclick="back()"><i
                     class="fas fa-arrow-left"></i> Back to Employment</a></span></div>
 </div>
@@ -258,7 +295,7 @@
 
 {% block script %}
 
-    <script src="{{url_for('static', filename='js/resume.js')}}"></script>
-    <script src="{{url_for('static', filename='js/autoscrollto.js')}}"></script>
+<script src="{{url_for('static', filename='js/resume.js')}}"></script>
+<script src="{{url_for('static', filename='js/autoscrollto.js')}}"></script>
 
 {% endblock %}
