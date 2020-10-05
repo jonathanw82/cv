@@ -77,7 +77,7 @@ Under construction.
 
 
 #### Contact:
-The Contact page has navigation across the top and footer across the bottom, with a form across the middle of the page and a submit button below that. On submit, an overlay with packman wizzing round and loading please wait is displayed, while the infomation is being sent to via the emailJS API, once the infomation is sent the overlay clears and a thank you we have recieved you email message is injected via javascript. The API is linked to the owner's email account so all correspondence from the website is collected in the inbox of the owner.
+The Contact page has navigation across the top and footer across the bottom, with a form across the middle of the page and a submit button below that. On submit, an overlay with packman wizzing round and loading please wait is displayed, while the information is being sent to via the emailJS API, once the information is sent the overlay clears and a thank you we have recieved you email message is injected via javascript. The API is linked to the owner's email account so all correspondence from the website is collected in the inbox of the owner.
 
 
 #### Download
