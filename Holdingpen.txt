@@ -168,3 +168,21 @@ $(document).ready(function(){
     
   });
 });
+
+
+I am friendly and cheerful, with a strong sense of commitment and attention to detail
+                in life.
+                I always strive to progress, both on a personal level and within the workplace. In order to stay ahead
+                of fast moving
+                changes in product engineering and technology I am well practiced at adapting, learning and refining new
+                skills quickly.
+                I pride myself on being articulate and being able to communicate with people at all levels and am able
+                to work well as
+                part of a team or on my own initiative.</p>
+            <p>
+                Formerly from a background in primary engineering, I have recently retrained as a web developer,
+                bringing with me a love of problem-solving, strong attention to detail and a focus on UX.
+                Throughout my career, I have worked in highly skilled roles that involved interacting with the public
+                and colleagues to find practical solutions to technical problems. My career change was prompted by
+                discovering a love for writing code to benefit my own projects working with microcontrollers and
+                automation.
