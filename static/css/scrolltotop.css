@@ -59,12 +59,6 @@
     
     .scrollToTop{
         right:10px;
+        top:70%;
     }
 }     
- 
-@media only screen and (max-width: 320px){
-
-    .scrollToTop{
-        top:450px;
-    }
-}

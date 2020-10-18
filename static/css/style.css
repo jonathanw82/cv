@@ -184,6 +184,9 @@ footer{
         padding-right: 5px;
     }
     .copyright-footer{
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
-}    
+    .footer-icon{
+        font-size: 1.5rem;
+    }
+}

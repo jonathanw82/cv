@@ -69,9 +69,13 @@
 }  
 
 @media only screen and (max-width: 375px){
-   
+    .emptyDiv{
+        height: 100px;
+    }
 }  
 
 @media only screen and (max-width: 320px){
- 
+    .emptyDiv{
+        height: 50px;
+    }
 }  
