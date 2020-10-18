@@ -143,9 +143,11 @@
     .jobrespon{
         text-align: center;
     }
-
     .mobilCompanyInfo{
         text-align: center;
+    }
+    .emptyDiv{
+        height: 100px;
     }
 }    
 

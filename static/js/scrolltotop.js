@@ -1,11 +1,6 @@
-// function autoScrollToBottom() {
-//     window.scrollTo(0, document.body.scrollHeight);
-// }
-
-// function autoScrollToTop(){
-//     document.documentElement.scrollTop = 0;
-// }
-
+function autoScrollToBottom(job) {
+    document.getElementById(job).scrollIntoView({behavior: 'smooth', block: 'center'});
+}
   
 /* This function starts when the page loads and enables the autoscroll funtion */ 
 

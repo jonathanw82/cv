@@ -14,7 +14,7 @@
         <div class="col-sm-12">
             <h3>Edit Blog Post:</h3>
             <form action="{{ url_for ('blog.edit_post', post_id=post._id)}}" method="POST">
-                Title: <input class="form-control" type="text" name="blog_title" value="{{ post.title }}" required>
+                Title: <input class="form-control" maxlength="25" type="text" name="blog_title" value="{{ post.title }}" required>
                 Blog: <textarea  class="form-control" name="blog_info" rows="3" maxlength="1000" placeholder="Limit 1000 characters" required>{{ post.blog }}</textarea>
                 Image: <input type="text" class="form-control image-field" name="image_url" id="image_url" value="{{ post.image }}" required>
                 <input style="display: none;" name="created" value="{{ post.created }}">

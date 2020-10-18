@@ -28,18 +28,19 @@ function selectjob(company) {
     document.getElementById('backbutton').className = "show";
 };
 
-function back() {
+function back(back) {
     // The Back function changed the class names to adjust the css to 
     // hide or show parts of the dom. In this case it hides the jobinfo and displays the work history.
     document.getElementById('workhistory').className = "row show";
     document.getElementById('jobinfo').className = "hide";
-    document.getElementById('backbutton').className = "hide";
+    // document.getElementById('backbutton').className = "hide";
+    document.getElementById(back).scrollIntoView({behavior: 'smooth'});
 }
 
 // There variables contain the relevent infomation for each job roll and when
 // called are displayed in the dom. 
 
-var slxjobroll = `<div class="col-lg-4 card-col">
+var slxjobroll = `<div class="col-lg-4 card-col" >
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="/static/images/slx.jpg" alt="Slx hire image">
                             <div class="card-body">
@@ -49,7 +50,7 @@ var slxjobroll = `<div class="col-lg-4 card-col">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-8 mobilCompanyInfo">
+                    <div class="col-lg-8 mobilCompanyInfo" id="slx">
                         <h3 class="jobrespon" id="lineUpToResp">SLX Hire & Events</h3>
                         <div><a href="https://www.slx.co.uk/" target="_blank">https://www.slx.co.uk/</a></div>
                         <span>Unit 115, Severnside Trading Estate, Burcott Rd, Avonmouth, Bristol BS11 8AF</span>
@@ -73,7 +74,10 @@ var slxjobroll = `<div class="col-lg-4 card-col">
                         <li>
                             Load & unload kit to meet shows tight time criteria.
                         </li>
-                    </div>`;
+                        <div class="backToTopButton">
+                        <span class="hide" id="backbutton"><a class="btn btn-info backbutton" onclick="back('slx-start')"><i
+                        class="fas fa-arrow-left"></i> Back to Employment</a></span></div></div>`;
+                        
 
 
 var woganjobroll = ` <div class="col-lg-4 card-col">
@@ -86,7 +90,7 @@ var woganjobroll = ` <div class="col-lg-4 card-col">
                         </div>
                     </div>
                     </div>
-                    <div class="col-lg-8 mobilCompanyInfo">
+                    <div class="col-lg-8 mobilCompanyInfo" id="wogan">
                     <h3 class="jobrespon" id="lineUpToResp">Wogan Coffee</h3>
                         <div><a href="https://wogancoffee.com/" target="_blank">https://wogancoffee.com</a></div>
                         <span>Roastery & Production Headquarters, 5-8 Elton Street, Bristol, BS2 9EH</span>
@@ -109,7 +113,9 @@ var woganjobroll = ` <div class="col-lg-4 card-col">
                             <li>
                                 Stock management of spare parts.  
                             </li>
-                    </div>`;
+                     <div class="backToTopButton">
+                    <span class="hide" id="backbutton"><a class="btn btn-info backbutton" onclick="back('wogan-start')"><i
+                                class="fas fa-arrow-left"></i> Back to Employment</a></span></div></div>`;
 
 
 var jncjobroll = `<div class="col-lg-4 card-col">
@@ -122,7 +128,7 @@ var jncjobroll = `<div class="col-lg-4 card-col">
                         </div>
                     </div>
                     </div>
-                    <div class="col-lg-8 mobilCompanyInfo">
+                    <div class="col-lg-8 mobilCompanyInfo" id="jnc">
                         <h3 class="jobrespon" id="lineUpToResp">JNC Sales</h3>
                         <div><a href="http://www.jnc-sales.co.uk/" target="_blank">http://www.jnc-sales.co.uk/</a></div>
                         <span>Unit 1 CCT Building, Greensplott Road, Chittening Trading Estate, Avonmouth, Bristol, BS11 0YB</span>
@@ -148,7 +154,9 @@ var jncjobroll = `<div class="col-lg-4 card-col">
                             <li>
                                 Support maintenance of the workshop and workshop equipment. 
                             </li>                 
-                    </div>`;
+                     <div class="backToTopButton">
+                    <span class="hide" id="backbutton"><a class="btn btn-info backbutton" onclick="back('jnc-start')"><i
+                                class="fas fa-arrow-left"></i> Back to Employment</a></span></div></div>`;
 
 
 var mendipjobroll = `<div class="col-lg-4 card-col">
@@ -161,7 +169,7 @@ var mendipjobroll = `<div class="col-lg-4 card-col">
                         </div>
                     </div>
                     </div>
-                    <div class="col-lg-8 mobilCompanyInfo">
+                    <div class="col-lg-8 mobilCompanyInfo" id="mendip">
                         <h3 class="jobrespon" id="lineUpToResp">Mendip Coin Co.</h3>
                         <span>Barton Lower Farm Gosling St, Barton St. David, Somerton, TA11 6GS</span>
                         <h4 >Responsibilities: Mobile Service Engineer</h4>
@@ -190,7 +198,9 @@ var mendipjobroll = `<div class="col-lg-4 card-col">
                             <li>
                                 Driving Vans (Including Luton) up to 3.5t to move machines.  
                             </li>               
-                    </div>`;
+                     <div class="backToTopButton">
+                    <span class="hide" id="backbutton"><a class="btn btn-info backbutton" onclick="back('mendip-start')"><i
+                                class="fas fa-arrow-left"></i> Back to Employment</a></span></div></div>`;
 
 
 var avocetjobroll = `<div class="col-lg-4 card-col">
@@ -203,7 +213,7 @@ var avocetjobroll = `<div class="col-lg-4 card-col">
                         </div>
                     </div>
                     </div>
-                    <div class="col-lg-8 mobilCompanyInfo">
+                    <div class="col-lg-8 mobilCompanyInfo" id="avocet">
                         <h3 class="jobrespon" id="lineUpToResp">Avocet Engineering - StackaStage </h3>
                         <div><a href="https://www.avoeng.com" target="_blank">https://www.avoeng.com</a></div>
                         <div><a href="https://stackastage.com" target="_blank">https://stackastage.com</a></div>
@@ -230,7 +240,9 @@ var avocetjobroll = `<div class="col-lg-4 card-col">
                                 Repair and service of top-line audio visual equipment (Including, Martin, Abstract, Chauvet, le Maitre, 
                                 Technics, Robe, Sennheiser, Denon, Pioneere, Rodec, Pearl, Thomas and Media theme). 
                             </li>               
-                    </div>`;    
+                    <div class="backToTopButton">
+                    <span class="hide" id="backbutton"><a class="btn btn-info backbutton" onclick="back('avocet-start')"><i
+                                class="fas fa-arrow-left"></i> Back to Employment</a></span></div></div>`;    
 
 
 var stagejobroll = `<div class="col-lg-4 card-col">
@@ -243,7 +255,7 @@ var stagejobroll = `<div class="col-lg-4 card-col">
                         </div>
                     </div>
                     </div>
-                    <div class="col-lg-8 mobilCompanyInfo">
+                    <div class="col-lg-8 mobilCompanyInfo" id="stage">
                         <h3 class="jobrespon" id="lineUpToResp">Stage Electrics </h3>
                         <div><a href="https://www.stage-electrics.co.uk" target="_blank">https://www.stage-electrics.co.uk</a></div>
                         <span>Stage Electrics, Encore House, Unit 3 Britannia Rd, Patchway Trading Estate, Patchway, Bristol, BS34 5TA</span>
@@ -260,4 +272,6 @@ var stagejobroll = `<div class="col-lg-4 card-col">
                             <li>
                                 Work within the service department repairing lighting and sound equipment
                             </li>             
-                    </div>`;                      
+                    <div class="backToTopButton">
+                    <span class="hide" id="backbutton"><a class="btn btn-info backbutton" onclick="back('stage-start')"><i
+                                class="fas fa-arrow-left"></i> Back to Employment</a></span></div></div>`;                      

@@ -223,9 +223,9 @@
             <h3 class="section-heading">Employment History</h3>
             <p class="sub-heading">Select the company for more infomation about responsibilities & infomation.</p>
         </div>
-        <div class="col-lg-4 col-md-6 mx-auto card-col">
+        <div class="col-lg-4 col-md-6 mx-auto card-col" id="slx-start">
             <!-- onclick will fire selectjob function with the company name as the parameter and Javascript will inject work history  -->
-            <div class="card cardhover" onclick="selectjob('slx'); autoScrollToBottom()" style="width: 18rem;">
+            <div class="card cardhover" onclick="selectjob('slx'); autoScrollToBottom('slx')" style="width: 18rem;">
                 <img class="card-img-top" src="/static/images/slx.jpg" alt="Slx hire image">
                 <div class="card-body">
                     <h5 class="card-title">SLX Hire</h5>
@@ -234,8 +234,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 mx-auto card-col">
-            <div class="card cardhover" onclick="selectjob('wogan'); autoScrollToBottom()" style="width: 18rem;">
+        <div class="col-lg-4 col-md-6 mx-auto card-col" id="wogan-start">
+            <div class="card cardhover" onclick="selectjob('wogan'); autoScrollToBottom('wogan')" style="width: 18rem;">
                 <img class="card-img-top" src="/static/images/wogan.jpg" alt="Wogan coffee image">
                 <div class="card-body">
                     <h5 class="card-title">Wogan Coffee</h5>
@@ -244,8 +244,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 mx-auto card-col">
-            <div class="card cardhover" onclick="selectjob('jnc'); autoScrollToBottom()" style="width: 18rem;">
+        <div class="col-lg-4 col-md-6 mx-auto card-col" id="jnc-start">
+            <div class="card cardhover" onclick="selectjob('jnc'); autoScrollToBottom('jnc')" style="width: 18rem;">
                 <img class="card-img-top" src="/static/images/jnc.jpg" alt="Jnc image">
                 <div class="card-body">
                     <h5 class="card-title">JNC Sales</h5>
@@ -254,8 +254,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 mx-auto card-col">
-            <div class="card cardhover" onclick="selectjob('mendip'); autoScrollToBottom()" style="width: 18rem;">
+        <div class="col-lg-4 col-md-6 mx-auto card-col" id="mendip-start">
+            <div class="card cardhover" onclick="selectjob('mendip'); autoScrollToBottom('mendip')" style="width: 18rem;">
                 <img class="card-img-top" src="/static/images/mendip.jpg" alt="Mendip image">
                 <div class="card-body">
                     <h5 class="card-title">Mendip Coin Co.</h5>
@@ -264,8 +264,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6  mx-auto card-col">
-            <div class="card cardhover" onclick="selectjob('avocet'); autoScrollToBottom()" style="width: 18rem;">
+        <div class="col-lg-4 col-md-6  mx-auto card-col" id="avocet-start">
+            <div class="card cardhover" onclick="selectjob('avocet'); autoScrollToBottom('avocet')" style="width: 18rem;">
                 <img class="card-img-top" src="/static/images/avocet.jpg" alt="Avocet image">
                 <div class="card-body">
                     <h5 class="card-title">Avocet Engineering</h5>
@@ -274,8 +274,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6  mx-auto card-col">
-            <div class="card cardhover" onclick="selectjob('stage'); autoScrollToBottom()" style="width: 18rem;">
+        <div class="col-lg-4 col-md-6  mx-auto card-col" id="stage-start">
+            <div class="card cardhover" onclick="selectjob('stage'); autoScrollToBottom('stage')" style="width: 18rem;">
                 <img class="card-img-top" src="/static/images/stage.jpg" alt="Stage image">
                 <div class="card-body">
                     <h5 class="card-title">Stage Electrics</h5>
@@ -285,9 +285,7 @@
             </div>
         </div>
     </div>
-    <div class="backToTopButton">
-        <span class="hide" id="backbutton"><a class="btn btn-info backbutton" onclick="back()"><i
-                    class="fas fa-arrow-left"></i> Back to Employment</a></span></div>
+  
 </div>
 
 <div class="emptyDiv"></div>
@@ -295,8 +293,5 @@
 {% endblock %}
 
 {% block script %}
-
-<script src="{{url_for('static', filename='js/resume.js')}}"></script>
-<script src="{{url_for('static', filename='js/autoscrollto.js')}}"></script>
-
+    <script src="{{url_for('static', filename='js/resume.js')}}"></script>
 {% endblock %}
