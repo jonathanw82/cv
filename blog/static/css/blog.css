@@ -98,6 +98,9 @@
     .card-text{
         font-size: 1.4rem;
     }
+    .emptydiv{
+        height: 100px;
+    }
 }   
 
 @media only screen and (max-width: 375px){
