@@ -13,7 +13,7 @@ $(document).ready(function (getRepos) {
 
     // loading Spinner
     document.getElementById('overlayBox').innerHTML = `<div id="overlay"><div class="spinner" id="spinner">
-    <iframe onclick="none" src="https://giphy.com/embed/d9QiBcfzg64Io" frameBorder="0" class="pacmanSpinner">
+    <iframe onclick="none" src="static/images/pacman.gif" frameBorder="0" class="pacmanSpinner" >
     </iframe></div><span class="loadingText">LOADING PLEASE WAIT!</span>`;
 
     // Api call to GitHub to pull my repository data
