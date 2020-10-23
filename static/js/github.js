@@ -100,13 +100,16 @@ function displayGitHubData(github_repo_return) {
         }
         else if (repoName == "eastbristolhops") {
             repoImage = "/static/images/ebh.jpg";
+        }
+        else if (repoName == "network_test") {
+            repoImage = "/static/images/intcon.jpg";
         }        
         else {
             repoImage = "https://image.flaticon.com/icons/svg/25/25231.svg";
         }
 
         document.getElementById('displayRepos').innerHTML += `<div class="col-lg-4 col-md-6 mx-auto card-col"><a class="card-a" href="${repoURL}" target="_blank"><div class="card">
-        <img class="card-img-top" id="cardImageSrc" src="${repoImage}" alt="Card image cap">
+        <img class="card-img-top" id="cardImageSrc" src="${repoImage}" alt="repo image">
         <div class="card-body"><h5 class="card-title">${repoName}</h5>
         <p class="card-text">${description}</p></div></div></a></div>`;
     };
