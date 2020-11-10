@@ -54,65 +54,81 @@ $(document).ready(function (getRepos) {
 });
 
 function displayGitHubData(github_repo_return) {
-    // Total repos are displayed by this hTML injection
-    let total_repos = github_repo_return.length;
-    document.getElementById('repoNumbers').innerHTML = `<p>Total number of Repositories to display ${total_repos}</p>`;
-
+   
     // this for loop iterates through the array sent from github and displayes the data 
     // on the HTML page.
     for (let i = 0; i < github_repo_return.length; i++) {
         
-        let repoName = github_repo_return[i].name;
-        let repoURL = github_repo_return[i].html_url;
-        let description = github_repo_return[i].description;
+        // declare the objects {} to be pushed into the array
+        var repN = [], selectRepo = {};
 
-        // if the repo names equal my preset names give them there coresponding images.
-        if (repoName == "Can_Share") {
-            repoImage = "/static/images/canshareRepoImage.jpg";
-            // livelink = "href= 'https://jonathanw82-canshare.herokuapp.com/'"
-        }
-        else if (repoName == "bristol-central-gym") {
-            repoImage = "/static/images/bristCentralRepoImage.jpg";
-        }
-        else if (repoName == "HydroBigTent") {
-            repoImage = "/static/images/hydroRepoImage.jpg";
-        }
-        else if (repoName == "myfavoritetune") {
-            repoImage = "/static/images/musicTrackRepoImage.jpg"
-        }
-        else if (repoName == "Soil_Watering") {
-            repoImage = "/static/images/soilwaterRepoImage.jpg";
-        }
-        else if (repoName == "the-honey-pot") {
-            repoImage = "/static/images/honeypotrepoImage.jpg";
-        }
-        else if (repoName == "cv") {
-            repoImage = "/static/images/cvrepoiamgegithub.jpg";
-        }
-        else if (repoName == "monster-rolodex") {
-            repoImage = "/static/images/rolodex.png";
-        }
-        else if (repoName == "blog") {
-            repoImage = "/static/images/blog.jpg";
-        }
-        else if (repoName == "Coffee") {
-            repoImage = "/static/images/coffeerepoimage.jpg";
-        }
-        else if (repoName == "eastbristolhops") {
-            repoImage = "/static/images/ebh.jpg";
-        }
-        else if (repoName == "network_test") {
-            repoImage = "/static/images/intcon.jpg";
-        }        
-        else {
-            repoImage = "https://image.flaticon.com/icons/svg/25/25231.svg";
-        }
+        selectRepo.repoName = github_repo_return[i].name;
+        selectRepo.repoURL = github_repo_return[i].html_url;
+        selectRepo.description = github_repo_return[i].description;
 
-        document.getElementById('displayRepos').innerHTML += `<div class="col-lg-4 col-md-6 mx-auto card-col"><a class="card-a" href="${repoURL}" target="_blank"><div class="card">
-        <img class="card-img-top" id="cardImageSrc" src="${repoImage}" alt="repo image">
-        <div class="card-body"><h5 class="card-title">${repoName}</h5>
-        <p class="card-text">${description}</p></div></div></a></div>`;
-    };
+        // Push only selected repos in to repN so Portfolio only has the items i want them to see
+        if(selectRepo.repoName == "Can_Share" || selectRepo.repoName == "bristol-central-gym" || selectRepo.repoName == "HydroBigTent"
+            || selectRepo.repoName == "myfavoritetune" || selectRepo.repoName == "Soil_Watering" || selectRepo.repoName == "the-honey-pot"
+            || selectRepo.repoName == "cv" || selectRepo.repoName == "monster-rolodex" || selectRepo.repoName == "blog" || selectRepo.repoName == "Coffee"
+            || selectRepo.repoName == "Coffee" || selectRepo.repoName == "eastbristolhops" || selectRepo.repoName == "network_test" 
+            || selectRepo.repoName == 'thehoneycombAM'){
+            repN.push(selectRepo.repoName);
+        }
+        makeRepo(repN);
+    }
+
+    function makeRepo(repN){
+        for(let i = 0; i < repN.length; i++){
+
+            let repoImage;
+           
+            if (selectRepo.repoName == "Can_Share") {
+                repoImage = "/static/images/canshareRepoImage.jpg";
+            }
+            else if (selectRepo.repoName == "bristol-central-gym") {
+                repoImage = "/static/images/bristCentralRepoImage.jpg";
+            }
+            else if (selectRepo.repoName == "HydroBigTent") {
+                repoImage = "/static/images/hydroRepoImage.jpg";
+            }
+            else if (selectRepo.repoName == "myfavoritetune") {
+                repoImage = "/static/images/musicTrackRepoImage.jpg"
+            }
+            else if (selectRepo.repoName == "Soil_Watering") {
+                repoImage = "/static/images/soilwaterRepoImage.jpg";
+            }
+            else if (selectRepo.repoName == "the-honey-pot") {
+                repoImage = "/static/images/honeypotrepoImage.jpg";
+            }
+            else if (selectRepo.repoName == "cv") {
+                repoImage = "/static/images/cvrepoiamgegithub.jpg";
+            }
+            else if (selectRepo.repoName == "monster-rolodex") {
+                repoImage = "/static/images/rolodex.png";
+            }
+            else if (selectRepo.repoName == "blog") {
+                repoImage = "/static/images/blog.jpg";
+            }
+            else if (selectRepo.repoName == "Coffee") {
+                repoImage = "/static/images/coffeerepoimage.jpg";
+            }
+            else if (selectRepo.repoName == "eastbristolhops") {
+                repoImage = "/static/images/ebh.jpg";
+            }
+            else if (selectRepo.repoName == "network_test") {
+                repoImage = "/static/images/intcon.jpg";
+            }        
+            else {
+                repoImage = "https://image.flaticon.com/icons/svg/25/25231.svg";
+            }
+
+            document.getElementById('displayRepos').innerHTML += `<div class="col-lg-4 col-md-6 mx-auto card-col"><a class="card-a" 
+            href="${selectRepo.repoURL}" target="_blank"><div class="card">
+            <img class="card-img-top" id="cardImageSrc" src="${repoImage}" alt="repo image">
+            <div class="card-body"><h5 class="card-title">${selectRepo.repoName}</h5>
+            <p class="card-text">${selectRepo.description}</p></div></div></a></div>`;
+        }
+    }
     // Shows the new footer
     document.getElementById('tempFooter').classList.add("tempFooterShow");
 }
