@@ -1,5 +1,5 @@
 <h1 align="center">
-   <a href="https://jonwheway-cv.herokuapp.com/" target="_blank"><img src="static/images/cvrepoimage.png" alt="logo image"/></a>
+   <a href="https://www.jonwhewaycode.co.uk/" target="_blank"><img src="static/images/cvrepoimage.png" alt="logo image"/></a>
  </h1>
  
 <div align="center">
