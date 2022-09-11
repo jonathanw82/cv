@@ -1,9 +1,3 @@
-/* This function  hides the orininal footer as the orininal footer would not stay at the bottom
-of the page while html was injected in to the dom, instead it is hidden and then a hard coded version 
-is then displayed via css display block once the page has loaded and the api results are back to display*/
-$(document).ready(function(){
-    document.getElementById('githubHide').className = "githubHide";
-});
 
 /* These Functions start automatically when the page is loaded and sends a request to the 
 gitHub API, requesting all my repos in an array, I then iterate them out with a for loop
@@ -64,8 +58,6 @@ function displayGitHubData(github_repo_return) {
         selectRepo.repoName = github_repo_return[i].name;
         selectRepo.repoURL = github_repo_return[i].html_url;
         selectRepo.description = github_repo_return[i].description;
-
-        console.log(selectRepo.repoName)
 
         // Push only selected repos in to repN so Portfolio only has the items i want them to see
         if(selectRepo.repoName == "Can_Share" || selectRepo.repoName == "bristol-central-gym" || selectRepo.repoName == "HydroBigTent"

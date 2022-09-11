@@ -42,7 +42,7 @@ html{
     padding-left: 50px;
 }
 
-footer{
+.footer{
     background-color: #f8f9fa!important;
     padding-top: 3px;
     text-align: center;
@@ -51,6 +51,7 @@ footer{
     position: absolute;
     width: 100%;
 }
+
 
 .footer-icon{
     color: rgb(0,0,0,.5)!important;

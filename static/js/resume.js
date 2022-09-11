@@ -8,7 +8,7 @@ function selectjob(company) {
     if(company == 'lettusgrow'){
         document.getElementById('jobinfo').innerHTML = lettusgrowjobroll;
     }
-    else if (company == 'slx') {
+     if (company == 'slx') {
         document.getElementById('jobinfo').innerHTML = slxjobroll;
     }
     else if (company == 'wogan') {
@@ -30,7 +30,7 @@ function selectjob(company) {
     document.getElementById('jobinfo').className = "row show";
     document.getElementById('workhistory').className = "hide";
     document.getElementById('backbutton').className = "show";
-};
+}
 
 function back(back) {
     // The Back function changed the class names to adjust the css to 

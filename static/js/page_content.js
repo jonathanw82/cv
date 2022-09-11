@@ -1,5 +1,17 @@
 "use strict";
 
+let page_footer = `		
+<div class="container-fluid">
+<div class="row">
+    <div class="col-sm-12">
+        <a href="https://www.linkedin.com/in/jonathan-wheway/" target="_blank"><i class="fab fa-linkedin footer-icon" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square footer-icon" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square footer-icon" aria-hidden="true"></i></a>
+        <a href="https://github.com/jonathanw82" target="_blank"><i class="fab fa-github-square footer-icon"></i></a><br>
+        <div class="copyright-footer" >Copyright-&copy; 2019-<script> document.write(new Date().getFullYear()); </script><a> Jonwhewaycode</a></div>
+    </div>
+</div>
+</div>`;
 
 let index_page = `<div class="container">
 <a href="#" class="scrollToTop"><i class="fas fa-arrow-up scrolltotopicon"></i></a>
@@ -40,7 +52,6 @@ let index_page = `<div class="container">
 </div>
 </div>
 <div class="emptyDiv"></div>`;
-
 
 let resume_page = `<div class="container">
 <a href="#" class="scrollToTop"><i class="fas fa-arrow-up scrolltotopicon"></i></a>
