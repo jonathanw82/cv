@@ -1,14 +1,10 @@
-"use strict";
-
 /* Selectjob function takes the onclick on the company cards and uses the company name as
 the parameter to pass through to company, depending on what name as been passed, the if statments
 manipulate the dom with the relavent infomation */
 
 function selectjob(company) {
-    if(company == 'lettusgrow'){
-        document.getElementById('jobinfo').innerHTML = lettusgrowjobroll;
-    }
-    else if (company == 'slx') {
+
+    if (company == 'slx') {
         document.getElementById('jobinfo').innerHTML = slxjobroll;
     }
     else if (company == 'wogan') {
@@ -37,49 +33,14 @@ function back(back) {
     // hide or show parts of the dom. In this case it hides the jobinfo and displays the work history.
     document.getElementById('workhistory').className = "row show";
     document.getElementById('jobinfo').className = "hide";
+    // document.getElementById('backbutton').className = "hide";
     document.getElementById(back).scrollIntoView({behavior: 'smooth'});
 }
 
 // There variables contain the relevent infomation for each job roll and when
 // called are displayed in the dom. 
 
-let lettusgrowjobroll = `<div class="col-lg-4 card-col" >
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="./static/images/lettusgrow.jpg" alt="lettusgrow image">
-                            <div class="card-body">
-                                <h5 class="card-title">LettUs Grow Ltd</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">April 2021 – current</h6>
-                                <p class="card-text">Maintenance Manager</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 mobilCompanyInfo" id="lettusgrow">
-                        <h3 class="jobrespon" id="lineUpToResp">LettUs Grow</h3>
-                        <div><a href="https://www.lettusgrow.com" target="_blank">https://www.lettusgrow.com</a></div>
-                        <span>Unit 4, Avon Valley Business Park, Chapel Way, Brislington, Bristol BS4 4EU</span>
-                        <h4 >Responsibilities: Maintenance Manager</h4>
-                        <li>
-                            Manage maintenance engineers schedules, well-being, learning and development including, 
-                            holding regular 1:1, deligating jobs, managing holiday and sic days and finding the best learning and development projets for each individual engineer.
-                        </li>
-                        <li>
-                            Fault finding and repair of cutting edge Aeroponic vertical farms, including Glass houses.
-                        </li>
-                        <li>
-                            Design, build and write code for prototype projects such as fanspeed controllers and Hvac controllers.
-                        </li>
-                        <li>
-                            Make bespoke wiring looms for customers specialized needs. 
-                        </li>
-                        <li>
-                            Build Drop&Grow &trade; containers 
-                        </li>
-                        <div class="backToTopButton">
-                        <span class="hide" id="backbutton"><a class="btn btn-info backbutton" onclick="back('slx-start')"><i
-                        class="fas fa-arrow-left"></i> Back to Employment</a></span></div></div>`;
-
-
-let slxjobroll = `<div class="col-lg-4 card-col" >
+var slxjobroll = `<div class="col-lg-4 card-col" >
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="/static/images/slx.jpg" alt="Slx hire image">
                             <div class="card-body">
@@ -119,7 +80,7 @@ let slxjobroll = `<div class="col-lg-4 card-col" >
                         
 
 
-let woganjobroll = ` <div class="col-lg-4 card-col">
+var woganjobroll = ` <div class="col-lg-4 card-col">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="/static/images/wogan.jpg" alt="Wogan coffee image">
                         <div class="card-body">
@@ -157,7 +118,7 @@ let woganjobroll = ` <div class="col-lg-4 card-col">
                                 class="fas fa-arrow-left"></i> Back to Employment</a></span></div></div>`;
 
 
-let jncjobroll = `<div class="col-lg-4 card-col">
+var jncjobroll = `<div class="col-lg-4 card-col">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="/static/images/jnc.jpg" alt="Jnc image">
                         <div class="card-body">
@@ -198,7 +159,7 @@ let jncjobroll = `<div class="col-lg-4 card-col">
                                 class="fas fa-arrow-left"></i> Back to Employment</a></span></div></div>`;
 
 
-let mendipjobroll = `<div class="col-lg-4 card-col">
+var mendipjobroll = `<div class="col-lg-4 card-col">
                     <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="/static/images/mendip.jpg" alt="Mendip image">
                         <div class="card-body">
@@ -242,7 +203,7 @@ let mendipjobroll = `<div class="col-lg-4 card-col">
                                 class="fas fa-arrow-left"></i> Back to Employment</a></span></div></div>`;
 
 
-let avocetjobroll = `<div class="col-lg-4 card-col">
+var avocetjobroll = `<div class="col-lg-4 card-col">
                     <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="/static/images/avocet.jpg" alt="Avocet image">
                         <div class="card-body">
@@ -284,7 +245,7 @@ let avocetjobroll = `<div class="col-lg-4 card-col">
                                 class="fas fa-arrow-left"></i> Back to Employment</a></span></div></div>`;    
 
 
-let stagejobroll = `<div class="col-lg-4 card-col">
+var stagejobroll = `<div class="col-lg-4 card-col">
                     <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="/static/images/stage.jpg" alt="Stage image">
                         <div class="card-body">

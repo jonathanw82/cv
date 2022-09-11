@@ -61,19 +61,17 @@ function displayGitHubData(github_repo_return) {
         
         // declare the objects {} to be pushed into the array
         var repN = [], selectRepo = {};
+
         selectRepo.repoName = github_repo_return[i].name;
         selectRepo.repoURL = github_repo_return[i].html_url;
         selectRepo.description = github_repo_return[i].description;
-
-        console.log(selectRepo.repoName)
 
         // Push only selected repos in to repN so Portfolio only has the items i want them to see
         if(selectRepo.repoName == "Can_Share" || selectRepo.repoName == "bristol-central-gym" || selectRepo.repoName == "HydroBigTent"
             || selectRepo.repoName == "myfavoritetune" || selectRepo.repoName == "Soil_Watering" || selectRepo.repoName == "the-honey-pot"
             || selectRepo.repoName == "cv" || selectRepo.repoName == "monster-rolodex" || selectRepo.repoName == "blog" || selectRepo.repoName == "Coffee"
             || selectRepo.repoName == "Coffee" || selectRepo.repoName == "eastbristolhops" || selectRepo.repoName == "network_test" 
-            || selectRepo.repoName == 'thehoneycombAM' || selectRepo.repoName == "solarterrestrialdata"
-            || selectRepo.repoName == "fanControlReadMe" || selectRepo.repoName == "Hvac_controlReadme" ){
+            || selectRepo.repoName == 'thehoneycombAM'){
             repN.push(selectRepo.repoName);
         }
         makeRepo(repN);
@@ -85,50 +83,41 @@ function displayGitHubData(github_repo_return) {
             let repoImage;
            
             if (selectRepo.repoName == "Can_Share") {
-                repoImage = "./static/images/canshareRepoImage.jpg";
+                repoImage = "/static/images/canshareRepoImage.jpg";
             }
             else if (selectRepo.repoName == "bristol-central-gym") {
-                repoImage = "./static/images/bristCentralRepoImage.jpg";
+                repoImage = "/static/images/bristCentralRepoImage.jpg";
             }
             else if (selectRepo.repoName == "HydroBigTent") {
-                repoImage = "./static/images/hydroRepoImage.jpg";
+                repoImage = "/static/images/hydroRepoImage.jpg";
             }
             else if (selectRepo.repoName == "myfavoritetune") {
-                repoImage = "./static/images/musicTrackRepoImage.jpg"
+                repoImage = "/static/images/musicTrackRepoImage.jpg"
             }
             else if (selectRepo.repoName == "Soil_Watering") {
-                repoImage = "./static/images/soilwaterRepoImage.jpg";
+                repoImage = "/static/images/soilwaterRepoImage.jpg";
             }
             else if (selectRepo.repoName == "the-honey-pot") {
-                repoImage = "./static/images/honeypotrepoImage.jpg";
+                repoImage = "/static/images/honeypotrepoImage.jpg";
             }
             else if (selectRepo.repoName == "cv") {
-                repoImage = "./static/images/cvrepoiamgegithub.jpg";
+                repoImage = "/static/images/cvrepoiamgegithub.jpg";
             }
             else if (selectRepo.repoName == "monster-rolodex") {
-                repoImage = "./static/images/rolodex.png";
+                repoImage = "/static/images/rolodex.png";
             }
             else if (selectRepo.repoName == "blog") {
-                repoImage = "./static/images/blog.jpg";
+                repoImage = "/static/images/blog.jpg";
             }
             else if (selectRepo.repoName == "Coffee") {
-                repoImage = "./static/images/coffeerepoimage.jpg";
+                repoImage = "/static/images/coffeerepoimage.jpg";
             }
             else if (selectRepo.repoName == "eastbristolhops") {
-                repoImage = "./static/images/ebh.jpg";
+                repoImage = "/static/images/ebh.jpg";
             }
             else if (selectRepo.repoName == "network_test") {
-                repoImage = "./static/images/intcon.jpg";
-            }    
-            else if (selectRepo.repoName == "fanControlReadMe") {
-                repoImage = "./static/images/fan.jpg";
-            }
-            else if (selectRepo.repoName == "Hvac_controlReadme") {
-                repoImage = "./static/images/hvac.jpg";
-            }    
-            else if (selectRepo.repoName == "solarterrestrialdata") {
-                repoImage = "./static/images/solaRepoImage.jpg";
-            }   
+                repoImage = "/static/images/intcon.jpg";
+            }        
             else {
                 repoImage = "https://image.flaticon.com/icons/svg/25/25231.svg";
             }

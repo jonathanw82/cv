@@ -1,0 +1,173 @@
+
+/*-------------------------- Body ----------------------------*/
+
+body{
+ min-height: 0;   
+}
+
+.emptyDivTop{
+    height: 80px;
+}
+
+.emptyDiv{
+    height: 20px;
+}
+
+.githubHide{
+    display: none;
+}
+
+.scrollToTop{
+    border: 1px solid gray;
+}
+
+/*------------------------- GitHub --------------------------- */
+
+.bg-image-github{
+    background-image: url('/static/images/githubbackimage.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.git-heading{
+    text-align: center;
+    color: #ffff;
+}
+
+.diaplayRepos{
+    color: #fff;
+}
+
+
+/*------------------------- GitHub cards ----------------------- */
+.card-col{
+    padding-top: 15px;
+    text-align: -webkit-center;
+}
+
+.card{
+   width: 18rem;
+   margin-bottom: 10px;
+   color: gray;
+}
+
+.card:hover{
+    box-shadow: inset 0px 0px 20px rgba(0,0,0,0.9);
+    color: black;
+}
+
+.card-a{
+    text-decoration: none!important;
+}
+
+.backToTopButton{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 250px;
+}
+
+/*-------------------- GitHub loading spinner ------------------ */
+
+#overlay {
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2;
+    cursor: pointer; 
+  }
+
+.spinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    margin:0px auto;
+    width: 250px;
+    height: 250px;
+    z-index: 20; 
+}
+
+.loadingText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    margin:0px auto;
+    z-index: 40; 
+    color: yellow;
+    font-size: 2.8rem;
+    font-weight: 900;
+    width: 80%;
+    text-align: center;
+    -webkit-text-stroke: 2px red;
+}
+
+.pacmanSpinner{
+    width: 100%;
+    height: 100% ;
+    position: absolute;
+    overflow: visible;
+} 
+
+.tempFooter{
+    background-color: #f8f9fa!important;
+    padding-top: 3px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    margin-top: auto;
+}
+
+.tempFooterShow{
+    display: block;
+}
+
+/* ------------------- Media Queries github.html -----------------*/
+
+@media only screen and (max-width: 768px){
+   
+    
+}    
+
+@media only screen and (max-width: 425px){
+
+    .loadingText{
+        font-size: 1.8rem;
+    }
+}  
+
+@media only screen and (max-width: 375px){
+
+   
+}  
+
+@media only screen and (max-width: 320px){
+
+    .loadingText{
+        font-size: 1.6rem;
+    }
+
+    .card{
+        width: 17rem;
+    }
+
+    .card-col{
+        padding-left: 10px;
+    }
+}  

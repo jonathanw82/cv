@@ -1,0 +1,167 @@
+/*----------------- Special items ----------------- */
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.emptyDiv{
+    height: 80px;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: show;
+}
+
+.whitespace{
+    height: 50px;
+}
+
+/*------------------Progress bars ------------------ */
+
+.progress{
+    position: relative;
+    height: 25px;
+    margin-bottom: 4px;
+}
+
+.progress-type{
+    position: absolute;
+    left: 0px;
+    font-weight: 400;
+    padding: 2px 30px 2px 10px;
+    color: #fafafa;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.progress-section{
+    margin: 40px 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    border: 1px solid lightgray; 
+}
+
+.section-heading{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sub-heading{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.reasons-heading{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+/*------------------------- Education ----------------------- */
+
+.educationImages{
+    width: 50%;
+    height: auto;
+}
+
+.educationHeading{
+    padding-top: 10px;
+}
+
+.image-eduction{
+   text-align: center;
+   margin: auto;
+}
+
+.educationRow{
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    border: 1px solid lightgray; 
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.educationclick{
+    color: black!important;
+}
+
+.educationclick h5{
+    color: black!important;
+}
+
+/*------------------------- Job history cards ----------------------- */
+
+.card-col{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: -webkit-center;
+}
+
+.card-img-top{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid lightgray;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.card:hover{
+    box-shadow: inset 0px 0px 20px rgba(0,0,0,0.9);
+    color: black;
+}
+
+.jobrespon{
+    padding-top: 10px;
+}
+
+.backbutton{
+    color: #ffff!important;
+    bottom: 0px;
+}
+
+.backToTopButton{
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+ /* ------------------- Media Queries contact.html -----------------*/
+
+ @media only screen and (max-width: 768px){
+    
+    .jobrespon{
+        text-align: center;
+    }
+    .mobilCompanyInfo{
+        text-align: center;
+    }
+    .emptyDiv{
+        height: 100px;
+    }
+}    
+
+@media only screen and (max-width: 425px){
+    
+    .educationInfo{
+    text-align: center!important;
+}
+
+}   
+
+@media only screen and (max-width: 320px){
+
+   .bttButton{
+    margin-bottom: 4px;
+   }
+}

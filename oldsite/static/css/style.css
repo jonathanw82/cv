@@ -1,0 +1,192 @@
+
+/*---------------------- Body -------------------------*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+}
+
+html{
+    height: 100%;
+}
+
+.emptyDiv{
+    height: 50px;
+}
+
+/*--------------- Navingation and footer ------------- */
+
+.nav-bar-center{
+    justify-content: center!important;
+}
+
+.nav-item{
+    text-align: center;
+    width: 100px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
+.link-hover:hover{
+    color: black!important;
+}
+
+.nav-item-name{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: rgb(0,0,0,.5)!important;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+footer{
+    background-color: #f8f9fa!important;
+    padding-top: 3px;
+    text-align: center;
+    margin-top: auto;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.footer-icon{
+    color: rgb(0,0,0,.5)!important;
+    font-size: 1.5rem;
+}
+
+.footer-icon:hover{
+    color: black!important;
+}
+
+.copyright-footer{
+    color: rgb(0,0,0,.5)!important;
+    font-size: 1.1rem;
+}
+
+#nameLoginLink{
+    color: rgb(0,0,0,.5)!important;
+}
+
+#nameLoginLink:hover{
+    text-decoration: none;
+    color: black!important;
+}
+/* ------------------- Media Queries base.html -----------------*/
+
+@media only screen and (min-width: 768px){
+
+    .nav-name-mobile{
+        display: none;
+    }
+    .nav-name-mobile1{
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 991px){
+
+    #mobilelogo{
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 991px){
+
+    .bg-light{
+        justify-content: center;
+    }
+    .nav-icon{
+        display: none;
+    }
+    .nav-item{
+        text-align: left;
+    }
+    .nav-name-desktop{
+        display: none;
+    }
+    .nav-name-mobile{
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    
+    .bg-light{
+        justify-content: center;
+    }
+    .nav-icon{
+        display: none;
+    }
+    .nav-item{
+        text-align: left;
+    }
+    .nav-name-desktop{
+        display: none;
+    }
+    .nav-name-mobile{
+        display: block;
+    }
+    .nav-name-mobile1{
+        display: none;
+    }
+}    
+
+@media only screen and (max-width: 474px){
+
+    .nav-name-mobile{
+        display: none;
+    }
+    .nav-name-mobile1{
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width: 425px){
+  
+    .nav-item-name{
+        font-size: 1.7rem;
+    }
+    .nav-name-mobile{
+        display: none;
+    }
+    .nav-name-mobile1{
+        margin-right: 5px;
+    }
+}    
+
+@media only screen and (max-width: 375px){
+
+    .nav-item-name{
+        font-size: 1.6rem;
+    }
+} 
+
+@media only screen and (max-width: 362px){
+
+    .navbar-toggler-icon{
+        font-size: 1rem;
+    }
+    .nav-name-mobile1{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 320px){
+
+    .nav-item-name{
+        padding-right: 5px;
+    }
+    .copyright-footer{
+        font-size: 0.9rem;
+    }
+    .footer-icon{
+        font-size: 1.5rem;
+    }
+}

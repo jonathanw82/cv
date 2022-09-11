@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://kit.fontawesome.com/a71ecb4f79.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@300&family=Roboto&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="./static/favicon.ico">
+	<link rel="stylesheet" href="./static/css/style.css" type="text/css">
+	<link rel="stylesheet" href="./static/css/scrolltotop.css" type="text/css">
+	<script src="./static/js/scrolltotop.js"></script>
+   
+    
+	<title id="block_title"></title>
+</head>
+
+<body class="{{ background }}"> <!--Displays background image on selected page -->
+	<header>
+		<nav class="navbar navbar-expand-lg sticky navbar-light bg-light">
+			<a class="navbar-brand nav-item-name nav-name-mobile" onclick="nav('index')">Jonathan Wheway</a>
+			<a class="navbar-brand nav-item-name nav-name-mobile1" onclick="nav('index')">Jon Wheway</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">	
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse nav-bar-center" id="navbarNavAltMarkup">
+			  <div class="navbar-nav">
+				<a class="nav-item nav-link link-hover"  href="#" onclick="nav('index')"><i class="fa fa-home nav-icon home-icon" aria-hidden="true"></i><br><span> Home</span></a>
+				<a class="nav-item nav-link link-hover"  href="#" onclick="nav('resume')"><i class="fa fa-graduation-cap nav-icon resume-icon" aria-hidden="true"></i><br><span> Resume</span></a>
+				<a class="nav-item nav-link link-hover"  href="#" onclick="nav('github')"><i class="fab fa-github nav-icon github-icon"></i><br><span> Portfolio</span></a>
+				<a class="navbar-brand nav-item-name nav-name-desktop link-hover" href="#" onclick="nav('index')">Jonathan Wheway</a>
+				<a class="nav-item nav-link link-hover" href="#" onclick="nav('blog')"><i class="fas fa-seedling nav-icon hobbies-icon" aria-hidden="true"></i><br><span> Blog</span></a>
+				<a class="nav-item nav-link link-hover" href="#" onclick="nav('contact')"><i class="fa fa-comment-o nav-icon contact-icon" aria-hidden="true"></i><br><span> Contact</span></a>
+				<a class="nav-item nav-link link-hover" href="./static/doc/JonWheway-CV-uptodate2020.pdf" target="_blank"><i class="fa fa-download nav-icon download-icon" aria-hidden="true"></i><br><span> Download</span></a>
+			</div>
+			</div>
+		  </nav>
+	</header>
+
+    <!--================================================ Block content ======================================================-->
+    <div class="block_content" id="block_content"></div>
+    <!--=============================================== End Block content ===================================================-->
+
+	<footer id="githubHide" class="">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+					<a href="https://www.linkedin.com/in/jonathan-wheway/" target="_blank"><i class="fab fa-linkedin footer-icon" aria-hidden="true"></i></a>
+					<a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square footer-icon" aria-hidden="true"></i></a>
+					<a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square footer-icon" aria-hidden="true"></i></a>
+					<a href="https://github.com/jonathanw82" target="_blank"><i class="fab fa-github-square footer-icon"></i></a><br>
+					<div class="copyright-footer" >Copyright-&copy; 2019-<script> document.write(new Date().getFullYear()); </script><a> Jonwhewaycode</a></div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!--=============================================== Java Script ===================================================-->
+
+    <script src="./static/js/page_content.js"></script>
+    <script src="./static/js/block_content.js"></script>
+</body>
+
+</html>
